@@ -1,3 +1,5 @@
+require_relative '../basic/hanoi_tower'
+
 RSpec.describe HanoiTower do
   describe "#move" do
     it "prints the steps to move disks from source to target" do
