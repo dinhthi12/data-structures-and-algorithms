@@ -7,3 +7,4 @@ def solution(n)
   end
   return sum
 end
+1

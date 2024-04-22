@@ -15,3 +15,4 @@ RSpec.describe 'solution' do
     end
   end
 end
+1
