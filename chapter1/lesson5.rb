@@ -7,4 +7,3 @@ def solution(n)
   end
   return result
 end
-1
