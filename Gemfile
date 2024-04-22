@@ -6,3 +6,5 @@ source "https://rubygems.org"
 gem 'rspec', '~> 3.4'
 # IDE tools for code analysis and autocompletion
 gem 'solargraph', '~> 0.1.0'
+# Rake is a Make-like program implemented in Ruby.
+gem 'rake', '~> 13.2', '>= 13.2.1'
