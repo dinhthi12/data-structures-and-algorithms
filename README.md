@@ -1,3 +1,3 @@
 # test
 
-## rspec ./test/chater[number]/lesson[number].rb
+## rspec ./test/chapter[number]/lesson[number].rb
