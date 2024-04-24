@@ -1,10 +1,27 @@
-#Bài 1: Tính S(n) = 1 + 2 + 3 + … + n
+require_relative '../../chapter2/lesson1'
 
-def solution(n)
-  sum = 0
-  for i in 1..n do
-    sum = sum + i
+RSpec.describe 'solution' do
+  describe 'when all numbers are positive' do
+    it 'returns the maximun number' do
+      expect(solution(1, 2, 3)).to eq(3)
+      expect(solution(4, 2, 1)).to eq(4)
+      expect(solution(6, 8, 7)).to eq(8)
+    end
   end
-  return sum
+
+  describe 'when some numbers are negative' do
+    it 'returns the maximum number' do
+      expect(solution(-1, -2, -3)).to eq(-1)
+      expect(solution(-4, -2, -1)).to eq(-1)
+      expect(solution(-6, 8, 7)).to eq(8)
+    end
+  end
+
+  describe 'when all numbers are negative' do
+    it 'returns the maximum number' do
+      expect(solution(-1, -2, -3)).to eq(-1)
+      expect(solution(-4, -2, -1)).to eq(-1)
+      expect(solution(-6, -8, -7)).to eq(-6)
+    end
+  end
 end
-1
