@@ -1,13 +1,13 @@
 require 'rspec/core/rake_task'
 
-# Task để chạy tất cả các spec
+# Task to run all specs
 desc 'Run all specs'
 task :spec do
   Rake::Task['spec:chapter1:run'].invoke
   Rake::Task['spec:chapter2:run'].invoke
 end
 
-# Task để chạy spec cho chapter 1
+# Task to run spec for chapter 1
 namespace :spec do
   namespace :chapter1 do
     RSpec::Core::RakeTask.new(:run) do |task|
@@ -16,11 +16,20 @@ namespace :spec do
   end
 end
 
-# Task để chạy spec cho chapter 2
+# Task to run spec for chapter 2
 namespace :spec do
   namespace :chapter2 do
     RSpec::Core::RakeTask.new(:run) do |task|
       task.pattern = Dir.glob('test/chapter2/**/*_spec.rb')
+    end
+  end
+end
+
+# Task to run spec for chapter 3
+namespace :spec do
+  namespace :chapter2 do
+    RSpec::Core::RakeTask.new(:run) do |task|
+      task.pattern = Dir.glob('test/chapter3/**/*_spec.rb')
     end
   end
 end
