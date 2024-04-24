@@ -5,7 +5,6 @@ desc 'Run all specs'
 task :spec do
   Rake::Task['spec:chapter1:run'].invoke
   Rake::Task['spec:chapter2:run'].invoke
-  # Thêm các task khác nếu có
 end
 
 # Task để chạy spec cho chapter 1
