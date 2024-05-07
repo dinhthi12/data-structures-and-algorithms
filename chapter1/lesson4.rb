@@ -1,4 +1,4 @@
-#Bài 4: Tính S(n) = ½ + ¼ + … + 1/2n
+# Tính S(n) = ½ + ¼ + … + 1/2n
 
 def solution(n)
   return 0 if n == 0

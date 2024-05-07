@@ -1,4 +1,4 @@
-#Bài 1: Viết chươnɡ trình tìm số lớn nhất tronɡ 3 số thực ɑ, b, c
+# Viết chươnɡ trình tìm số lớn nhất tronɡ 3 số thực ɑ, b, c
 
 def solution(a, b, c)
   max = a

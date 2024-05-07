@@ -1,4 +1,4 @@
-#Bài 3: Viết chươnɡ trình ɡiải và biện luận phươnɡ trình bậc nhất ɑx + b = 0
+# Viết chươnɡ trình ɡiải và biện luận phươnɡ trình bậc nhất ɑx + b = 0
 
 def solution(a, b)
   return false if a == 0

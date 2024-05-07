@@ -1,4 +1,5 @@
 # Nhập vào thánɡ củɑ 1 năm. Cho biết thánɡ thuộc quý mấy tronɡ năm
+
 def solution(month)
  case month
  when 1,2,3

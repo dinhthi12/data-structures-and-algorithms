@@ -1,4 +1,4 @@
-#Bài 5: Tính S(n) = 1 + 1/3 + 1/5 + … + 1/(2n + 1)
+# Tính S(n) = 1 + 1/3 + 1/5 + … + 1/(2n + 1)
 
 def solution(n)
   result = 0.0

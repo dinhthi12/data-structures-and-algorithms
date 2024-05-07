@@ -1,4 +1,4 @@
-#Bài 3: Tính S(n) = 1 + ½ + 1/3 + … + 1/n
+# Tính S(n) = 1 + ½ + 1/3 + … + 1/n
 
 def solution(n)
   return 0 if n == 0

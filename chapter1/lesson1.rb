@@ -1,4 +1,4 @@
-#Bài 1: Tính S(n) = 1 + 2 + 3 + … + n
+# Tính S(n) = 1 + 2 + 3 + … + n
 
 def solution(n)
   sum = 0

@@ -1,4 +1,4 @@
-#Bài 2: Tính S(n) = 1^2 + 2^2 + … + n^2
+# Tính S(n) = 1^2 + 2^2 + … + n^2
 
 def solution(n)
   result = 0
