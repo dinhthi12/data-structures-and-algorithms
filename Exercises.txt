@@ -75,7 +75,7 @@ Bài 37: Tính S(n) = CanBac N(N + CanBac N – 1(N – 1 + … + CanBac3(3 + Ca
 
 Bài 38: Tính S(n) = CanBac N + 1(N + CanBac N(N – 1 +…+CanBac3(2 + CanBac2(1)))) có n dấu căn
 
- 
+
 
 Bài 39: Tính S(n) = CanBac N + 1(N! + CanBacN((N – 1)! + … + CanBac3(2! + CanBac2(1!))) có n dấu căn
 
@@ -83,7 +83,7 @@ Bài 40: Tính S(n) = CanBac2(x^n + CanBac2(x^n-1 + … + CanBac2(x^2 + CanBac2(
 
 Bài 41: Tính S(n) = 1 / (1 + 1 / ( 1 + 1 / (…. 1 + 1 / 1 + 1))) có n dấu phân số
 
- 
+
 
 Bài 42: Cho n là số nguyên dương. Hãy tìm giá trị nguyên dương k lớn nhất sao cho S(k)  < n. Trong đó chuỗi k được định nghĩa như sau: S(k) = 1 + 2 + 3 + … + k
 
@@ -123,7 +123,7 @@ Bài 59: Hãy kiểm tra số nguyên dương n có phải là số đối xứn
 
 Bài 60: Hãy kiểm tra các chữ số của số nguyên dương n có tăng dần từ trái sang phải hay không
 
- 
+
 
 Bài 61: Hãy kiểm tra các chữ số của số nguyên dương n có giảm dần từ trái sang phải hay không
 
@@ -181,7 +181,7 @@ Bài 92: Tìm ước số chung lớn nhất của 2 số nguyên dương
 
 Bài 93: Viết chương trình kiểm tra 1 số có phải là số nguyên tố hay không
 
- 
+
 
 Bài 94: Viết chương trình in ra tất cả các số lẻ nhỏ hơn 100 trừ các số 5, 7, 93
 
@@ -211,7 +211,7 @@ Bài 104: Viết chương trình nhập ngày, tháng, năm. Tính xem ngày đ�
 
 Bài 105: Viết chương trình nhập 1 số nguyên có 2 chữ số.  Hãy in ra cách đọc của số nguyên này
 
- 
+
 
 Bài 106 Viết chương trình nhập 1 số nguyên có 3 chữ số.  Hãy in ra cách đọc của số nguyên này
 
@@ -228,7 +228,7 @@ Bài 111: Viết chương trình in ra tam giác cân có độ cao h
 Tam giác cân đặc nằm giữa màn hình
 Tam giác cân rỗng nằm giữa màn hình
 Tam giác  vuông cân đặc
- 
+
 
 Tam giác  vuông cân rỗng
 Bài 112: Viết chương trình in ra hình chữ nhật có kích thước m x n
@@ -237,7 +237,7 @@ Hình chữ nhật đặc
 Hình chữ nhật rỗng
 Bài 113: Lập chương trình tính sin(x) với độ chính xác 0.00001 theo công thức
 
- 
+
 
 Sin(x) = x – x^3/3! + x^5/5! + … + (-1)^n . x^2n + 1/(2n + 1)!
 
@@ -257,11 +257,11 @@ Bài 119: Liệt kê tất cả các số nguyên tố nhỏ hơn n
 
 Bài 120: Liệt kê tất cả các số chính phương nhỏ hơn n
 
- 
 
- 
 
- 
+
+
+
 
 Chương 4:
 
@@ -283,7 +283,7 @@ Bài 128 + 130: Viết hàm nhập, xuất mảng 1 chiều các số thực
 
 Bài 129 + 131: Viết hàm nhập, xuất mảng 1 chiều các số nguyên
 
- 
+
 
 Bài 132: Viết hàm liệt kê các giá trị chẵn trong mảng 1 chiều các số nguyên
 
@@ -305,9 +305,9 @@ Bài 139: Tìm vị trí số hoàn thiện cuối cùng trong mảng 1 chiều 
 
 Bài 140: Hãy tìm giá trị dương nhỏ nhất trong mảng 1 chiều các số thực. Nếu mảng không có giá trị dương thì sẽ trả về -1
 
- 
 
-Bài 141: Hãy tìm vị trí giá trị dương nhỏ nhất trong mảng 1 chiều các số thực. Nếu mảng không có 
+
+Bài 141: Hãy tìm vị trí giá trị dương nhỏ nhất trong mảng 1 chiều các số thực. Nếu mảng không có
 giá trị dương thì trả về  -1
 
 Các bài tập luyện tập
@@ -336,7 +336,7 @@ Bài 152: Hãy tìm số hoàn thiện nhỏ nhất trong mảng 1 chiều các 
 
 Bài 153: Hãy tìm giá trị chẵn nhỏ nhất trong mảng 1 chiều các số nguyên. Nếu mảng không có số chẵn thì trả về -1
 
- 
+
 
 Bài 154: Hãy tìm vị trí giá trị âm nhỏ nhất trong mảng các số thực. Nếu mảng không có số âm thì trả về -1
 
@@ -358,13 +358,13 @@ Bài 161: Cho mảng 1 chiều các số nguyên, hãy tìm giá trị đầu ti
 
 Bài 162: Cho mảng 1 chiều các số thực. Hãy viết hàm tìm một vị trí trong mảng thỏa 2 điều kiện: có 2 giá trị lân cận và giá trị tại đó bằng tích 2 giá trị lân cận. Nếu mảng không tồn tại giá trị như vậy thì trả về giá trị -1
 
- 
+
 
 Bài 163: Tìm số chính phương đầu tiên trong mảng 1 chiều các số nguyên
 
 Bài 164: Cho mảng 1 chiều các số nguyên. Hãy tìm giá trị đầu tiên thỏa mãn tính chất số gánh
 
- 
+
 
 Bài 165: Cho mảng 1 chiều các số nguyên. Hãy tìm giá trị đầu tiên có chữ số đầu tiên là chữ số lẻ
 
@@ -376,13 +376,13 @@ Bài 168: Cho mảng 1 chiều các số nguyên. Hãy viết hàm tìm giá tr�
 
 Bài 169 (*): Cho mảng 1 chiều các số nguyên. Hãy viết hàm tìm số chẵn nhỏ nhất lớn hơn mọi giá trị có trong mảng
 
- 
+
 
 Bài 170: Cho mảng 1 chiều các số nguyên. Hãy viết hàm tìm số nguyên tố nhỏ nhất lớn hơn mọi giá trị có trong mảng
 
 Bài 171: Cho mảng 1 chiều các số nguyên. Hãy viết hàm tìm ước chung lớn nhất của tất cả các phần tử trong mảng
 
- 
+
 
 Bài 172: Cho mảng 1 chiều các số nguyên. Hãy viết hàm tìm bội chung nhỏ nhất của tất cả các phần tử trong mảng
 
@@ -390,7 +390,7 @@ Bài 173 (*): Cho mảng 1 chiều các số nguyên. Hãy  viết hàm tìm ch�
 
 Bài 174 (*): Cho mảng số thực có nhiều hơn 2 giá trị và các giá trị trong mảng khác nhau từng đôi một. Hãy viết hàm liệt kê tất cả các cặp giá trị (a, b) trong mảng thỏa điều kiện a <= b
 
- 
+
 
 Bài 175 (*): Cho mảng số thực có nhiều hơn 2 giá trị và các giá trị trong mảng khác nhau từng đôi một. Hãy viết hàm tìm 2 giá trị gần nhau nhất trong mảng (Lưu ý: Mảng có các giá trị khác nhau từng đôi một còn có tên là mảng phân biệt)
 
@@ -408,7 +408,7 @@ Bài 180: Hãy liệt kê các giá trị trong mảng mà thỏa điều kiện
 
 Bài 181: Cho mảng 1 chiều các số nguyên. Hãy viết hàm liệt kê các giá trị chẵn có ít nhất 1 lân cận cũng là giá trị chẵn
 
- 
+
 
 Bài 182: Cho mảng 1 chiều các số thực. Hãy viết hàm liệt kê tất cả các giá trị trong mảng có ít nhất 1 lận cận trái dấu với nó
 
@@ -426,7 +426,7 @@ Bài 188: Hãy liệt kê các vị trí chẵn lớn nhất trong mảng 1 chi�
 
 Bài 189: Hãy liệt kê các giá trị trong mảng 1 chiều các số nguyên có chữ số đầu tiên là chữ số lẻ
 
- 
+
 
 Bài 190: Hãy liệt kê các giá trị có toàn chữ số lẻ trong mảng 1 chiều các số nguyên
 
@@ -446,7 +446,7 @@ Bài 197: Hãy liệt kê các giá trị trong mảng các số nguyên có ch�
 
 Bài 198: Hãy liệt kê các vị trí mà giá trị tại đó là giá trị lớn nhất trong mảng 1 chiều các số thực
 
- 
+
 
 Bài 199: Hãy liệt kê các vị trí mà giá trị tại đó là số nguyên tố trong mảng 1 chiều các số nguyên
 
@@ -469,7 +469,7 @@ Bài 206: Tính tổng các giá trị lớn hơn các giá trị xung quanh tro
 
 Bài 207: Tính tổng các phần tử “cực trị” trong mảng. Một phần tử được gọi là cực trị khi nó
 
- 
+
 
 lớn hơn hoặc nhỏ hơn các phần tử xung quanh nó
 
@@ -507,7 +507,7 @@ Hàm trả về 1 trong 3 giá trị -1, 0, 1
 
 Giá trị -1 là chẵn nhiều hơn lẻ
 
-Giá trị 0 là chẵn bằng lẻ               
+Giá trị 0 là chẵn bằng lẻ
 
 Giá trị 1 là chẵn ít hơn lẻ
 
@@ -521,7 +521,7 @@ Bài 225: Đếm số lượng giá trị lớn nhất có trong mảng
 
 Bài 226: Hãy xác định số lượng phần tử kề nhau mà cả 2 đều chẵn
 
- 
+
 
 Bài 227: Hãy xác định số lượng phần tử kề nhau mà cả 2 trái dấu
 
@@ -531,29 +531,29 @@ và có giá trị tuyệt đối lớn hơn
 
 Bài 229: Đếm số lượng các giá trị phân biệt có trong mảng
 
- 
+
 
 Bài 230: Liệt kê tần suất xuất hiện các giá trị trong mảng (mỗi giá trị liệt kê 1 lần)
 Bài 231: Hãy liệt kê các giá trị xuất hiện trong mảng 1 chiều các số nguyên đúng 1 lần
 
- 
+
 
 Bài 232: Hãy liệt kê các giá trị xuất hiện trong dãy quá 1 lần. Lưu ý: mỗi giá trị liệt kê 1 lần
 
- 
+
 
 Bài 233: Hãy liệt kê tần suất của các giá trị xuất hiện trong dãy. Lưu ý: mỗi giá trị liệt kêt tần suất 1 lần
 
- 
+
 
 Bài 234: Cho 2 mảng a, b. Đếm số lượng giá trị chỉ xuất hiện 1 trong 2 mảng
 
- 
+
 
 Bài 235: Cho 2 mảng a, b. Liệt kê các giá trị chỉ xuất hiện 1 trong 2 mảng
 Bài 236(*): Cho 2 mảng a, b. Hãy cho biết số lần xuất hiện của mảng a trong mảng b
 
- 
+
 
 Bài 237 + 238(*): Hãy liệt kê các giá trị có số lần xuất hiện nhiều nhất trong mảng
 
@@ -587,11 +587,11 @@ Bài 253: Hãy cho biết tất cả các phần tử trong mảng a có nằm t
 
 Bài 254: Hãy đếm giá trị trong mảng thỏa: lớn hơn tất cả các giá trị đứng đằng trước nó
 
- 
+
 
 Kỹ thuật sắp xếp
 
- 
+
 
 Bài 255: Sắp xếp mảng tăng dần
 
@@ -613,7 +613,7 @@ Bài 263: Sắp xếp số dương tăng dần, âm giảm dần. Vị trí tư�
 
 Bài 264: Trộn 2 mảng đã tăng thành 1 mảng được sắp xếp tăng
 
- 
+
 
 Bài 265: Cho 2 mảng tăng. Hãy trộn thành 1 mảng giảm dần
 
@@ -647,7 +647,7 @@ Bài 277: Xóa tất cả các số nguyên tố trong mảng
 
 Bài 278: Xóa tất cả các phần tử trùng nhau trong mảng và chỉ giữ lại duy nhất 1 phần tử
 
- 
+
 
 Bài 279: Xóa tất cả các phần tử xuất hiện nhiều hơn 1 lần trong mảng
 
@@ -763,7 +763,7 @@ Bài 331: Tính tổng các giá trị trên 1 dòng của ma trận các số t
 
 Bài 332: Tính tổng các giá trị lẻ trên 1 cột của ma trận các số nguyên
 
- 
+
 
 Bài 333: Tính tổng các số hoàn thiện trong ma trận các số nguyên
 
@@ -783,7 +783,7 @@ Bài 339: Đếm số lượng số hoàn thiện trên 1 hàng trong ma trận 
 
 Bài 340: Đếm số lượng số âm trên 1 cột trong ma trận các số thực
 
- 
+
 
 Bài 341: Đếm số lượng số dương trên biên trong ma trận các số thực
 
@@ -817,7 +817,7 @@ Bài 354: Kiểm tra các giá trị trong ma trận có giảm dần theo dòng
 
 Bài 355: Liệt kê các dòng toàn âm trong ma trận các số thực
 
- 
+
 
 Bài 356: Liệt kê chỉ số các dòng chứa toàn giá trị chẵn trong ma trận các số nguyên
 
@@ -887,7 +887,7 @@ Bài 387: Liệt kê các dòng có nhiều số chẵn nhất
 
 Bài 388: Liệt kê các dòng có nhiều số nguyên tố nhất
 
- 
+
 
 Bài 389: Liệt kê các dòng có nhiều số hoàn thiện nhất
 
@@ -907,7 +907,7 @@ Bài 395: Dịch lên xoay vòng các hàng trong ma trận
 
 Bài 396: Dịch trái xoay vòng các cột trong ma trận
 
- 
+
 
 Bài 397: Dịch phải xoay vòng các cột trong ma trận
 
@@ -923,7 +923,7 @@ Bài 402: Xoay ma trận 1 góc 90 độ
 
 Bài 403: Xoay ma trận 1 góc 180 độ
 
- 
+
 
 Bài 404: Xoay ma trận 1 góc 270 độ
 
@@ -957,7 +957,7 @@ Bài 414: Viết hàm sắp xếp các phần tử trong ma trận theo yêu c�
 
 –          Cột có chỉ số lẻ tăng dần từ trên xuống
 
- 
+
 
 Bài 415 Sắp xếp ptử tăng dần theo hàng và cột: Dùng 2 phương pháp: sử dụng mảng phụ và ko dùng mảng phụ
 
@@ -977,7 +977,7 @@ Bài 422: Sắp xếp các dòng dựa vào: tổng các ptử trong 1 dòng: s�
 
 Bài 423: Sắp xếp giá trị các ptử trong ma trận tăng dần theo dạng xoắn ốc (ma trận xoắn ốc)
 
- 
+
 
 Bài 424: Sắp xếp giá trị các ptử trong ma trận tăng dần theo dạng ziczac
 
@@ -1017,7 +1017,7 @@ Bài 435: Viết hàm đếm số lượng số nguyên tố trong ma trận vu�
 
 Bài 436: Viết hàm tính tổng các giá trị âm trong ma trận vuông các số thực
 
- 
+
 
 Bài 437: Viết hàm sắp xếp ma trận vuông các số thực tăng dần từ trên xuống dưới và từ trái sang phải
 
@@ -1031,7 +1031,7 @@ Bài 440: Tổng phần tử trên đường chéo chính
 
 Bài 441: Tổng phần tử trên đường chéo phụ
 
- 
+
 
 Bài 442: Tổng phần tử chẵn nằm trên biên
 
@@ -1073,7 +1073,7 @@ Bài 457: Kiểm tra ma trận có đối xứng wa chéo chính ko
 
 Bài 458: Kiểm tra ma trận có đối xứng wa chéo phụ ko
 
- 
+
 
 Bài 459: Kiểm tra ma trận có phải là ma phương ko? Ma phương là khi tổng ptử trên các dòng, cột và 2 chéo chính phụ bằng nhau
 
@@ -1087,7 +1087,7 @@ Bài 462: Hoán vị 2 dòng
 
 Bài 463: Hoán vị 2 cột
 
- 
+
 
 Bài 464: sắp các dòng tăng dần theo tổng dòng
 
@@ -1109,7 +1109,7 @@ Bài 471: Tích 2 ma trận
 
 Bài 472: * Ma trận nghịch đảo
 
- 
+
 
 Bài 473: * Định thức của ma trận
 
@@ -1157,7 +1157,7 @@ Bài 491: Định nghĩa toán tử (operator *) cho 2 đơn thức
 
 Bài 492: Định nghĩa toán tử (operator /) cho 2 đơn thức
 
- 
+
 
 SourceCode
 
@@ -1225,7 +1225,7 @@ Bài 520: Định nghĩa toán tử operator ++ cho 2 phân số
 
 Bài 521: Định nghĩa toán tử operator — cho 2 phân số
 
- 
+
 
 SourceCode
 
@@ -1251,7 +1251,7 @@ Bài 530 Kiểm tra hỗn số tối giản
 
 Bài 531 Qui đồng 2 hỗn số
 
- 
+
 
 SourceCode
 
@@ -1273,7 +1273,7 @@ Bài 538: Tính thương 2 số phức
 
 Bài 539: Tính lũy thừa bậc n số phức
 
- 
+
 
 SourceCode
 
@@ -1309,7 +1309,7 @@ Bài 553: Kiểm tra điểm thuộc phần tư thứ 3 ko?
 
 Bài 554: Kiểm tra điểm thuộc phần tư thứ 4 ko?
 
- 
+
 
 SourceCode
 
@@ -1337,7 +1337,7 @@ Bài 564: Tìm tọa độ điểm đối xứng qua mặt phẳng Oxz
 
 Bài 565: Tìm tọa độ điểm đối xứng qua mặt phẳng Oyz
 
- 
+
 
 SourceCode
 
@@ -1359,7 +1359,7 @@ Bài 572: Kiểm tra 1 tọa độ điểm có nằm trong đường tròn hay k
 
 Bài 573: Cho 2 đường tròn. Tính diện tích phần mặt phẳng bị phủ bởi 2 đường tròn đó
 
- 
+
 
 SourceCode
 
@@ -1379,7 +1379,7 @@ Bài 579: Xét vị trí tương đối giữa 2 hình cầu(không cắt nhau, 
 
 Bài 580: Kiểm tra 1 tọa độ điểm có nằm bên trong hình cầu hay không
 
- 
+
 
 SourceCode
 
@@ -1508,11 +1508,11 @@ Bài 611: Hãy khai báo kiểu dữ liệu để biểu diễn thông tin của
 
 Sau đó viết hàm nhập, xuất cho kiểu dữ liệu này
 
- 
+
 
 SourceCode
 
- 
+
 
 Bài 612: Hãy khai báo kiểu dữ liệu để biểu diễn thông tin của một cầu thủ. Biết rằng một cầu thủ gồm những thành phần sau:
 
@@ -1608,7 +1608,7 @@ Bài 618: Hãy khai báo kiểu dữ liệu để biểu diễn thông tin của
 
 Sau đó viết hàm nhập, xuất cho kiểu dữ liệu này
 
- 
+
 
 SourceCode
 
@@ -1645,7 +1645,7 @@ Bài 620: Hãy khai báo kiểu dữ liệu để biểu diễn thông tin của
 
 Sau đó viết hàm nhập, xuất cho kiểu dữ liệu này
 
- 
+
 
 SourceCode
 
@@ -1674,12 +1674,12 @@ Con trỏ và mảng 1 chiều
 
 + Thay đổi con trỏ sau khi ra khỏi hàm
 
- 
+
 
 + Con trỏ vô kiểu
 
 Con trỏ và mảng 2 chiều
- 
+
 
 + Nhập xuất
 
@@ -1731,7 +1731,7 @@ Bài 790: Thêm một node p vào sau node q trong danh sách
 
 Bài 791: Thêm một node p vào trước node q trong danh sách
 
- 
+
 
 Bài 792: Lấy node đầu tiên trong danh sách ra khỏi danh sách liên kết
 
@@ -1783,7 +1783,7 @@ Bài 798: Hãy khai báo cấu trúc dữ liệu cho danh sách liên kết đơ
 
 –          Tình trạng giường: 0 rảnh 1 bận
 
- 
+
 
 SourceCode
 
@@ -1804,38 +1804,6 @@ Bài 804: Viết hàm tạo node trong danh sách liên kết đơn các thí si
 Bài 805: Viết hàm tạo node trong danh sách liên kết đơn các phòng trong khách sạn(PHONG)
 
 Bài 806: Viết hàm tạo node trong danh sách liên kết đơn các đường tròn
-
-String
-
-Viết lại các hàm String
-
-Hàm STRLEN
-
-Hàm STRCPY
-
-Hàm STRCMP
-
-Hàm STRICMP
-
-Hàm STRCAT
-
-Hàm STRLWR
-
-Hàm STRUPR
-
-Hàm SUBSTR
-
-Hàm STRSTR
-
-Hàm STRREV
-
-Hàm ATOI
-
-Hàm ATOF
-
- 
-
-Hàm ITOA
 
 Tập tin:
 
@@ -1875,7 +1843,7 @@ Dùng tập tin lưu và xử lý dữ liệu
 
 –          Tính tổng các số thực
 
- 
+
 
 –          Xuất n số nguyên tố đầu
 Danh sách sinh viên
