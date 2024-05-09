@@ -10,3 +10,5 @@ gem 'solargraph', '~> 0.1.0'
 gem 'rake', '~> 13.2', '>= 13.2.1'
 # Byebug is a Ruby debugger.
 gem 'byebug', '~> 11.1', '>= 11.1.3'
+# Ruby code formatter
+gem 'rufo', '~> 0.0.1'
