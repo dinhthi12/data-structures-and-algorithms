@@ -1,0 +1,26 @@
+[
+  {
+    "manufacturer": "Suzuki",
+    "vehicle_name": "Suzuki",
+    "year_of_manufacture": 2000,
+    "max_speed": 100.0
+  },
+  {
+    "manufacturer": "Honda",
+    "vehicle_name": "Honda",
+    "year_of_manufacture": 2000,
+    "max_speed": 100.0
+  },
+  {
+    "manufacturer": "Honda",
+    "vehicle_name": "Honda",
+    "year_of_manufacture": 2000,
+    "max_speed": 100.0
+  },
+  {
+    "manufacturer": "Suzuki",
+    "vehicle_name": "Sirius",
+    "year_of_manufacture": 1777,
+    "max_speed": 299.0
+  }
+]
