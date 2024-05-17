@@ -3,11 +3,16 @@ require_relative 'OTo'
 require 'json'
 require 'terminal-table'
 
+def data_file_path
+  File.join(File.dirname(__FILE__), "data.json")
+end
+
 def save_data(new_data)
+  file_path = data_file_path
   # Kiểm tra xem tệp data.json đã tồn tại hay không
-  if File.exist?("data.json")
+  if File.exist?(file_path)
     # Đọc dữ liệu từ tệp data.json
-    existing_data = JSON.parse(File.read("data.json"))
+    existing_data = JSON.parse(File.read(file_path))
 
     # Thêm dữ liệu mới vào mảng đã có
     existing_data.concat(new_data)
@@ -17,16 +22,17 @@ def save_data(new_data)
   end
 
   # Ghi dữ liệu mới vào tệp data.json
-  File.open("data.json", "w") do |file|
+  File.open(file_path, "w") do |file|
     file.puts JSON.pretty_generate(existing_data)
   end
 end
 
 def load_data
+  file_path = data_file_path
   # Kiểm tra xem tệp data.json có tồn tại không
-  if File.exist?("data.json")
+  if File.exist?(file_path)
     # Đọc dữ liệu từ tệp data.json và chuyển đổi thành một mảng
-    data = JSON.parse(File.read("data.json"))
+    data = JSON.parse(File.read(file_path))
     return data
   else
     # Trả về mảng rỗng nếu tệp không tồn tại
@@ -41,18 +47,55 @@ def display_data(data)
   puts table
 end
 
+def input_transportation_info
+  table = Terminal::Table.new do |t|
+    t.add_row ["Enter vehicle information:".ljust(66)]
+  end
+
+  puts table
+
+  print "Manufacturer:"
+  manufacturer = gets.chomp
+  print "Vehicle name:"
+  vehicle_name = gets.chomp
+  print "Year of manufacture:"
+  year_of_manufacture = gets.chomp.to_i
+  print "Maximum speed:"
+  max_speed = gets.chomp.to_f
+
+  table = Terminal::Table.new do |t|
+    t.add_row ["Manufacturer:", manufacturer.ljust(43)]
+    t.add_row ["Vehicle name:", vehicle_name.ljust(43)]
+    t.add_row ["Year of manufacture:", year_of_manufacture.to_s.ljust(43)]
+    t.add_row ["Maximum speed:", max_speed.to_s.ljust(43)]
+  end
+
+  puts table
+
+  TransportationMeans.new(manufacturer, vehicle_name, year_of_manufacture, max_speed)
+end
+
+def display_menu
+  menu = Terminal::Table.new do |t|
+    t << ["Menu".ljust(66)]
+    t.add_separator
+    t.add_row ["1. Enter vehicle information"]
+    t.add_row ["2. Display vehicle information"]
+    t.add_row ["3. Enter information for n car objects"]
+    t.add_row ["4. Display information of n car objects with base speed"]
+    t.add_row ["5. Sort the list of cars by base speed in descending order"]
+    t.add_row ["6. Exit"]
+  end
+  puts menu
+  print "Select function: "
+end
+
 def main
   vehicle = []
 
   loop do
-    puts "\nMenu:"
-    puts "1. Enter vehicle information"
-    puts "2. Display vehicle information"
-    puts "3. Enter information for n car objects"
-    puts "4. Display information of n car objects with base speed"
-    puts "5. Sort the list of cars by base speed in descending order"
-    puts "6. Exit"
-    print "Select function: "
+
+    display_menu
     choice = gets.chomp.to_i
 
     case choice
@@ -60,10 +103,12 @@ def main
       puts "\n"
       vehicle << input_transportation_info
       save_data(vehicle)
+      puts "\n"
     when 2
       puts "\n"
       data = load_data
       display_data(data)
+      puts "\n"
     when 3
       puts "3"
     when 4
@@ -79,42 +124,4 @@ def main
   end
 end
 
-def input_transportation_info
-  width = 40
-  horizontal_line = "-" * width
-  puts "+" + horizontal_line + "+"
-
-  puts "Enter vehicle information:"
-  print "Manufacturer: "
-  manufacturer = gets.chomp
-  print "Vehicle name: "
-  vehicle_name = gets.chomp
-  print "Year of manufacture: "
-  year_of_manufacture = gets.chomp.to_i
-  print "Maximum speed: "
-  max_speed = gets.chomp.to_f
-
-  puts "+" + horizontal_line + "+"
-
-  TransportationMeans.new(manufacturer, vehicle_name, year_of_manufacture, max_speed)
-end
-
-# def display_transportation_info
-#   width = 40
-#   horizontal_line = "-" * width
-#   puts "+" + horizontal_line + "+"
-
-#   puts "Information of transportation:"
-#   vehicle = load_data
-
-#   vehicle.each do |v|
-#     puts "Manufacturer: #{v['manufacturer']}"
-#     puts "Vehicle Name: #{v['vehicle_name']}"
-#     puts "Year of Manufacture: #{v['year_of_manufacture']}"
-#     puts "Max Speed: #{v['max_speed']}"
-#     puts "+" + horizontal_line + "+"
-#   end
-#end
-
 main
-# irb => load OOP/lesson[number]/main.rb

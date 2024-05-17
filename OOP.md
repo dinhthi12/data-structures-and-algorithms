@@ -1,3 +1,7 @@
+irb => load OOP/lesson[number]/main.rb
+
+terminal => ruby OOP/lesson[number]/main.rb
+
 Bài 01 Sinh viên hãy lập trình hướng đối tượng bằng C++ thực hiện các việc sau:
 - Xây dựng lớp PhuongTienGiaoThong (phương tiện giao thông):
 +) Thuộc tính: Hãng sản xuất (chuỗi ký tự), Tên phương tiện (chuỗi ký tự), Năm sản xuất (số nguyên), Vận tốc tối đa (float).
@@ -14,7 +18,6 @@ Chương trình chính:
 3) (2 điểm) Nhập thông tin cho n đối tượng OTO bao gồm: Hãng sản xuất, Tên phương tiện, Năm sản xuất, Vận tốc tối đa, số chỗ ngồi, kiểu động cơ.
 4) (1 điểm) In ra màn hình thông tin của n đối tượng OTO cùng với vận tốc cơ sở.
 5) (2 điểm) Sắp xếp danh sách các đối tượng OTO theo thứ tự giảm dần của vận tốc cơ sở.
-
 
 
 Bài 02 Sinh viên hãy lập trình hướng đối tượng bằng C++ thực hiện các việc sau:

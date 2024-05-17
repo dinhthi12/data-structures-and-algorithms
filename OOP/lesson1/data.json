@@ -1,0 +1,56 @@
+[
+  {
+    "manufacturer": "Honda",
+    "vehicle_name": "Honda Civic Black",
+    "year_of_manufacture": 2010,
+    "max_speed": 200.0
+  },
+  {
+    "manufacturer": "Yamaha",
+    "vehicle_name": "Yamaha sirius",
+    "year_of_manufacture": 2001,
+    "max_speed": 100.0
+  },
+  {
+    "manufacturer": "Kia",
+    "vehicle_name": "Kia",
+    "year_of_manufacture": 2001,
+    "max_speed": 200.0
+  },
+  {
+    "manufacturer": "Honda",
+    "vehicle_name": "RSX 2010",
+    "year_of_manufacture": 2010,
+    "max_speed": 98.0
+  },
+  {
+    "manufacturer": "Kia",
+    "vehicle_name": "Kia morning 2010",
+    "year_of_manufacture": 2010,
+    "max_speed": 100.0
+  },
+  {
+    "manufacturer": "Honda",
+    "vehicle_name": "Civic 2010",
+    "year_of_manufacture": 2010,
+    "max_speed": 200.0
+  },
+  {
+    "manufacturer": "Mazda",
+    "vehicle_name": "Mazda 3",
+    "year_of_manufacture": 2010,
+    "max_speed": 200.0
+  },
+  {
+    "manufacturer": "Shapz",
+    "vehicle_name": "VF3",
+    "year_of_manufacture": 2022,
+    "max_speed": 200.0
+  },
+  {
+    "manufacturer": "VinFast",
+    "vehicle_name": "VF3",
+    "year_of_manufacture": 2010,
+    "max_speed": 200.0
+  }
+]
