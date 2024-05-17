@@ -75,6 +75,43 @@ def input_transportation_info
   TransportationMeans.new(manufacturer, vehicle_name, year_of_manufacture, max_speed)
 end
 
+
+def input_car_info
+  table = Terminal::Table.new do |t|
+    t.add_row ["Enter Oto information:".ljust(66)]
+  end
+
+  puts table
+
+  print "Manufacturer:"
+  manufacturer = gets.chomp
+  print "Vehicle name:"
+  vehicle_name = gets.chomp
+  print "Year of manufacture:"
+  year_of_manufacture = gets.chomp.to_i
+  print "Maximum speed:"
+  max_speed = gets.chomp.to_f
+  print "Seat number:"
+  seat_number = gets.chomp.to_i
+  print "Engine type :"
+  engine_type = gets.chomp
+
+  table = Terminal::Table.new do |t|
+    t.add_row ["Manufacturer:", manufacturer.ljust(43)]
+    t.add_row ["Vehicle name:", vehicle_name.ljust(43)]
+    t.add_row ["Year of manufacture:", year_of_manufacture.to_s.ljust(43)]
+    t.add_row ["Maximum speed:", max_speed.to_s.ljust(43)]
+    t.add_row ["Seat number:", seat_number.to_s.ljust(43)]
+    t.add_row ["Engine type:", engine_type.to_s.ljust(43)]
+  end
+
+  puts table
+
+  Oto.new(manufacturer, vehicle_name, year_of_manufacture, max_speed,seat_number,engine_type)
+end
+
+
+
 def display_menu
   menu = Terminal::Table.new do |t|
     t << ["Menu".ljust(66)]
@@ -110,13 +147,37 @@ def main
       display_data(data)
       puts "\n"
     when 3
-      puts "3"
+        n = nil
+        loop do
+          print "Enter the number of cars: "
+          n = gets.chomp
+          # Kiểm tra n có phải là số nguyên dương không
+          break if n.match?(/^\d+$/) && n.to_i > 0
+          puts "Please enter a positive integer."
+        end
+        cars = []
+        n.to_i.times do
+          cars << input_car_info
+        end
+      puts "\n"
     when 4
-      puts "4"
+      data = load_data
+      # Hiển thị thông tin của n đối tượng OTO cùng với vận tốc cơ sở
+      data.each do |oto|
+        puts "Manufacturer: #{oto['manufacturer']}, Vehicle name: #{oto['vehicle_name']}, Base speed: #{oto['max_speed']}"
+      end
+      puts "\n"
     when 5
-      puts "5"
+      data = load_data
+      # Sắp xếp danh sách các đối tượng OTO theo thứ tự giảm dần của vận tốc cơ sở
+      sorted_data = data.sort_by { |oto| -oto['max_speed'] }
+      # Hiển thị danh sách đã sắp xếp
+      puts "Sorted list of cars by base speed in descending order:"
+      sorted_data.each do |oto|
+        puts "Manufacturer: #{oto['manufacturer']}, Vehicle name: #{oto['vehicle_name']}, Base speed: #{oto['max_speed']}"
+      end
+      puts "\n"
     when 6
-      puts "6"
       break
     else
       puts "Invalid function. Please select again."

@@ -24,9 +24,9 @@ class TransportationMeans
 
   def output
     puts "Manufacturer: #{@manufacturer}"
-    puts "Vehicle Name: #{@vehicle_name}"
-    puts "Year of Manufacture: #{@year_of_manufacture}"
-    puts "Max Speed: #{@max_speed}"
+    puts "Vehicle name: #{@vehicle_name}"
+    puts "Year of manufacture: #{@year_of_manufacture}"
+    puts "Max speed: #{@max_speed}"
   end
 
   def to_json(options = {})
