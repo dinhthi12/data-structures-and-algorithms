@@ -1,7 +1,6 @@
 # In tất cả các số nɡuyên dươnɡ lẻ nhỏ hơn 100
 
 def solution
-
   #c1
   arr = Array.new
 
@@ -22,5 +21,3 @@ def solution
   #
   #arr
 end
-
-puts solution
