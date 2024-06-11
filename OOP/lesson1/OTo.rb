@@ -16,6 +16,7 @@ class OTo < TransportationMeans
   end
 
   def output
+    super
     puts "Seating Capacity: #{@seat_number}"
     puts "Engine Type: #{@engine_type}"
   end
