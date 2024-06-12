@@ -1,5 +1,10 @@
 require 'json'
 require 'terminal-table'
+
+def data_file_path
+  File.join(File.dirname(__FILE__), "data.json")
+end
+
 def display_menu
   menu = Terminal::Table.new do |t|
     t << ["Menu".ljust(66)]
