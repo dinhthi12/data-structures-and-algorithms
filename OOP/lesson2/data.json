@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Harry Potter",
+    "birth": 2001,
+    "coefficients_salary": 1.2,
+    "allowance": null
+  },
+  {
+    "id": 2,
+    "name": "Harry Won",
+    "birth": 1999,
+    "coefficients_salary": 2.1,
+    "allowance": null
+  },
+  {
+    "id": 3,
+    "name": "Nguyen Van R",
+    "birth": 2001,
+    "coefficients_salary": 1.2,
+    "allowance": null
+  },
+  {
+    "id": 4,
+    "name": "Nguyen Van Teo",
+    "birth": 1982,
+    "coefficients_salary": 3.2,
+    "allowance": 300
+  }
+]

@@ -1,4 +1,4 @@
-class Person
+class People
 
   def initialize(id, name)
     @id = id

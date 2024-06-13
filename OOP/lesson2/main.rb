@@ -1,9 +1,37 @@
+require_relative 'People'
+require_relative 'Employee'
 require 'json'
 require 'terminal-table'
 
 def data_file_path
   File.join(File.dirname(__FILE__), "data.json")
 end
+
+def save_data(new_data)
+  file_path = data_file_path
+  if File.exist?(file_path)
+    existing_data = JSON.parse(File.read(file_path))
+
+  else
+    existing_data = []
+  end
+
+  # Chuyển đổi đối tượng Employee thành hash (nếu cần)
+  new_data_hash = new_data.map(&:to_h)
+
+  # Kiểm tra và loại bỏ mục trùng lặp
+  new_data_hash.each do |new_entry|
+    unless existing_data.any? { |existing_entry| existing_entry["id"] == new_entry["id"] }
+      existing_data << new_entry
+    end
+  end
+
+  File.open(file_path, "w") do |file|
+    file.puts JSON.pretty_generate(existing_data)
+  end
+end
+
+
 
 def display_menu
   menu = Terminal::Table.new do |t|
@@ -21,6 +49,8 @@ def display_menu
 end
 
 def main
+  employees = []
+
   loop do
     display_menu
     choice = gets.chomp.to_i
@@ -28,7 +58,15 @@ def main
     case choice
     when 1
       puts "\n"
-      puts "Function 1"
+      employee = Employee.input
+
+      break if employee.nil?
+
+      # Thêm đối tượng Employee vào mảng
+      employees << employee
+
+      # Lưu dữ liệu vào file
+      save_data(employees)
       puts "\n"
     when 2
       puts "\n"
