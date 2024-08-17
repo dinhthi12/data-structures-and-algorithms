@@ -34,3 +34,32 @@ Chương trình chính:
 3) (2 điểm) Nhập thông tin cho n đối tượng NHANVIEN bao gồm: mã định danh, họ tên nhân viên, năm sinh, hệ số lương.
 4) (1 điểm) In ra màn hình thông tin của n đối tượng NHANVIEN cùng với lương.
 5) (2 điểm) Sắp xếp danh sách nhân viên theo thứ tự giảm dần theo hệ số lương. Hiển thị danh sách sau khi sắp.
+
+Bài 03 Sinh viên hãy lập trình hướng đối tượng bằng ngôn ngữ tự chọn để thực hiện các việc sau:
+Xây dựng lớp đối tượng NGUOI gồm:
+- Thành phần dữ liệu (Không cho phép truy cập từ ngoài class):  mã định danh, họ tên người
+- Phương thức: o Hàm khởi tạo, hàm nhập, hàm xuất.
+- Xây dựng lớp đối tượng NHANVIEN kế thừa từ lớp NGUOI có thêm
+o Thuộc tính thêm: năm sinh, hệ số lương o Thuộc tính tĩnh: tiền phụ cấp
+o Phương thức: hàm tạo đặt thông tin mặc định, hàm nhập, hàm xuất, hàm tính lương (=hệ số lương x 1550 + tiền phụ cấp)
+Chương trình chính:
+1) (3 điểm) Nhập từ bàn phím thông tin của một người bao gồm: mã định danh, họ tên người.
+2) (2 điểm) Hiển thị thông tin người đó ra màn hình.
+3) (2 điểm) Nhập thông tin cho n đối tượng NHANVIEN bao gồm: mã định danh, họ tên nhân viên, năm sinh, hệ số lương.
+4) (2 điểm) In ra màn hình thông tin của n đối tượng NHANVIEN cùng với lương.
+5) (1 điểm) In ra màn hình họ tên các nhân viên có lương cao nhất.
+
+Bài 04 Sinh viên hãy lập trình hướng đối tượng bằng ngôn ngữ tự chọn để thực hiện các việc sau:
+Xây dựng lớp đối tượng DATE gồm:
+- Thành phần dữ liệu (Không cho phép truy cập từ ngoài class):  ngày, tháng, năm
+- Phương thức:
+o Hàm khởi tạo, hàm nhập, hàm xuất. - Xây dựng lớp đối tượng CANBO kế thừa từ lớp DATE có thêm
+o Thuộc tính: mã cán bộ, tên cán bộ, ngày tháng năm sinh(kế thừa từ lớp DATE), lương cơ bản
+o Thuộc tính tĩnh: tiền phụ cấp chức vụ o Phương thức:
+hàm tạo đặt thông tin mặc định, hàm nhập, hàm xuất, hàm tính lương (=lương cơ bản + tiền phụ cấp chức vụ) Chương trình chính:
+1) (3 điểm) Nhập từ bàn phím thông tin của một ngày tháng năm,
+2) (2 điểm) Hiển thị thông tin ngày tháng năm đó ra màn hình.
+3) (2 điểm) Nhập thông tin cho n đối tượng CANBO.
+4) (1 điểm) In ra màn hình thông tin của n đối tượng CANBO.
+5) (1 điểm) Hiển thị ra màn hình lương của n cán bộ.
+6) (1 điểm) In ra màn hình tên các cán bộ có lương thấp nhất.

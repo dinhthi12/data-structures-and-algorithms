@@ -34,3 +34,42 @@ Main program:
 3) (2 points) Enter information for n NHANVIEN objects including: identification code, employee full name, year of birth, salary coefficient.
 4) (1 point) Print to the screen information of n NHANVIEN objects along with salary.
 5) (2 points) Arrange the list of employees in descending order according to salary coefficient. Display list after sorting.
+
+Lesson 03 Students are required to use object-oriented programming in their chosen language to accomplish the following tasks:
+
+Create a class PERSON with:
+
+Data Members (Not accessible from outside the class): ID code, full name
+Methods: Constructor, input method, output method
+Create a class EMPLOYEE that inherits from PERSON with additional:
+
+Attributes: Year of birth, salary coefficient
+Static Attribute: Allowance
+Methods: Default constructor, input method, output method, salary calculation method (= salary coefficient x 1550 + allowance)
+Main Program:
+
+(3 points) Input information of a person from the keyboard including ID code and full name.
+(2 points) Display the information of that person on the screen.
+(2 points) Input information for nEMPLOYEE objects including ID code, full name, year of birth, and salary coefficient.
+(2 points) Print on the screen the information of nEMPLOYEE objects along with their salaries.
+(1 point) Print on the screen the names of employees with the highest salary.
+
+Lesson 04 Students are required to use object-oriented programming in their chosen language to accomplish the following tasks:
+
+Create a class DATE with:
+
+Data Members (Not accessible from outside the class): Day, month, year
+Methods: Constructor, input method, output method
+Create a class OFFICIAL that inherits from DATE with additional:
+
+Attributes: Official ID, official name, date of birth (inherited from DATE), basic salary
+Static Attribute: Position allowance
+Methods: Default constructor, input method, output method, salary calculation method (= basic salary + position allowance)
+Main Program:
+
+(3 points) Input information of a date from the keyboard.
+(2 points) Display the information of that date on the screen.
+(2 points) Input information for nOFFICIAL objects.
+(1 point) Print on the screen the information of nOFFICIAL objects.
+(1 point) Display the salaries of n officials.
+(1 point) Print on the screen the names of officials with the lowest salary.
