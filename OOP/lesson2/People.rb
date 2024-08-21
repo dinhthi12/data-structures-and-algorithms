@@ -24,6 +24,6 @@ class People
     }.to_json(options)
   end
 
-  private
+  # private
   attr_accessor :id, :name
 end

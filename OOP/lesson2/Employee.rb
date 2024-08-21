@@ -46,6 +46,23 @@ class Employee < People
     super
     puts "Birth: #{@birth}"
     puts "Coefficients salary: #{@coefficients_salary}"
+    puts "Salary: #{@@allowance}"
+  end
+
+  def self.all
+    file_path = File.join(File.dirname(__FILE__), "data.json")
+    if File.exist?(file_path)
+      data = JSON.parse(File.read(file_path))
+      data.map do |entry|
+        Employee.new(entry["id"], entry["name"], entry["birth"], entry["coefficients_salary"])
+    end
+    else
+      []
+    end
+  end
+
+  def self.find_by_id(id)
+    all.find {|employee| employee.id == id}
   end
 
   def Payroll
@@ -62,7 +79,7 @@ class Employee < People
       "name" => @name,
       "birth" => @birth,
       "coefficients_salary" => @coefficients_salary,
-      "allowance" => @@allowance
+      "allowance" => Employee.allowance
     }
   end
 
@@ -72,7 +89,7 @@ class Employee < People
       name: @name,
       birth: @birth,
       coefficients_salary: @coefficients_salary,
-      allowance: @@allowance
+      allowance:Employee.allowance
     }.to_json(options)
   end
 end

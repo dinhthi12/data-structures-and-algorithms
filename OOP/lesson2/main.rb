@@ -31,8 +31,6 @@ def save_data(new_data)
   end
 end
 
-
-
 def display_menu
   menu = Terminal::Table.new do |t|
     t << ["Menu".ljust(66)]
@@ -70,7 +68,14 @@ def main
       puts "\n"
     when 2
       puts "\n"
-      puts "Function 2"
+      print "Enter employee ID to search: "
+      id = gets.chomp.to_i
+      employee = Employee.find_by_id(id)
+      if employee
+        employee.output
+        else
+          puts "Employee not found."
+        end
       puts "\n"
     when 3
       puts "\n"
