@@ -11,6 +11,5 @@ def solution(n)
     m += 1
     sum += m
   end
-
-  return m
+   m
 end

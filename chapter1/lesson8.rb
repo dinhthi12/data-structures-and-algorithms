@@ -5,5 +5,5 @@ def solution(n)
   for i in 1..n do
     result += (2*i +1).to_f/(2 * i + 2)
   end
-  return result
+   result
 end

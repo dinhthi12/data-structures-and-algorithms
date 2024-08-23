@@ -13,7 +13,6 @@ def save_data(new_data)
   if File.exist?(file_path)
     # Đọc dữ liệu từ tệp data.json
     existing_data = JSON.parse(File.read(file_path))
-
     # Thêm dữ liệu mới vào mảng đã có
     existing_data.concat(new_data)
   else
@@ -71,7 +70,6 @@ def input_transportation_info
   end
 
   puts table
-
   TransportationMeans.new(manufacturer, vehicle_name, year_of_manufacture, max_speed)
 end
 
@@ -106,11 +104,8 @@ def input_car_info
   end
 
   puts table
-
   Oto.new(manufacturer, vehicle_name, year_of_manufacture, max_speed,seat_number,engine_type)
 end
-
-
 
 def display_menu
   menu = Terminal::Table.new do |t|
@@ -131,7 +126,6 @@ def main
   vehicle = []
 
   loop do
-
     display_menu
     choice = gets.chomp.to_i
 

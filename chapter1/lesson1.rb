@@ -5,5 +5,5 @@ def solution(n)
   for i in 1..n do
     sum = sum + i
   end
-  return sum
+   sum
 end

@@ -2,5 +2,5 @@
 
 def solution(x, n)
   result = x**n
-  return result
+   result
 end

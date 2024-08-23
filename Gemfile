@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 
 # BDD for Ruby
-gem 'rspec', '~> 3.4'
+gem 'rspec'
 # IDE tools for code analysis and autocompletion
 gem 'solargraph', '~> 0.1.0'
 # Rake is a Make-like program implemented in Ruby.

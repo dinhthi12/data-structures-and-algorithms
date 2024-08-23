@@ -2,9 +2,7 @@
 
 def solution(a, b)
   return false if a == 0
-
   x = 0
   x = -b/a if b != 0
-
-  return x
+   x
 end

@@ -6,5 +6,5 @@ def solution(n)
   for i in 1..n do
     result = result + 1.0/ (2**i)
   end
-  return result
+   result
 end

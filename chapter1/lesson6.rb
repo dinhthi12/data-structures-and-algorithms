@@ -3,9 +3,7 @@
 def solution(n)
   result = 0
   for i in 1..n do
-#    result += 1.0/(i*(i+1))
     result += 1.0 / (i * (i + 1))
-
   end
-  return result
+   result
 end

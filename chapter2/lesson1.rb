@@ -2,9 +2,7 @@
 
 def solution(a, b, c)
   max = a
-
   max = b if b > max
   max = c if c > max
-
-  return max
+   max
 end

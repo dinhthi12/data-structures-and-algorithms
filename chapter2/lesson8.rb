@@ -10,5 +10,5 @@ def solution(n)
       result += i
     end
   end
-  return result
+   result
 end

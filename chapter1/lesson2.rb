@@ -5,5 +5,5 @@ def solution(n)
   for i in 1..n do
     result = result + i**2
   end
-  return result
+   result
 end

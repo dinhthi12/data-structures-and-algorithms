@@ -6,5 +6,5 @@ def solution(n)
   for i in 1..n do
     result = result + 1/i.to_f
   end
-  return result
+   result
 end

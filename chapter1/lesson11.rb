@@ -13,6 +13,5 @@ def solution(n)
     factorial *= i
     sum += factorial
   end
-
   sum
 end

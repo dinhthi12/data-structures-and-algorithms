@@ -8,6 +8,5 @@ def solution
     sum += n
     n += 1
   end
-
-  return n -1
+   n - 1
 end

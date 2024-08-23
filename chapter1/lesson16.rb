@@ -7,6 +7,5 @@ def solution(n)
     total = (i * (i + 1)) / 2.0
     sum += 1.0 / total
   end
-
   sum
 end

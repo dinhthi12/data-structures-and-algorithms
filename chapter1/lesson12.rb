@@ -6,6 +6,5 @@ def solution(x, n)
   (0..n).each do |i|
     result += x**i
   end
-
   result
 end

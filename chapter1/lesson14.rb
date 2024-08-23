@@ -5,6 +5,5 @@ def solution(x, n)
   (0..n).each do |i|
     result += x**(2*i + 1)
   end
-
   result
 end
