@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Tính S(n) = 1 + 1/1 + 2 + 1/ 1 + 2 + 3 + ….. + 1/ 1 + 2 + 3 + …. + N
 
 def solution(n)

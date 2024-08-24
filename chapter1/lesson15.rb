@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Tính S(n) = 1 + 1/1 + 2 + 1/ 1 + 2 + 3 + ….. + 1/ 1 + 2 + 3 + …. + N
 
 def solution(n)
@@ -7,7 +9,7 @@ def solution(n)
   (1..n).each do |i|
     result += i
     denominator += i
-    result += 1.0/ denominator
+    result += 1.0 / denominator
   end
   result
 end

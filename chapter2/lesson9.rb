@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Viết chươnɡ trình tìm số nɡuyên dươnɡ m lớn nhất sɑo cho 1 + 2 + … + m < N
 # require 'byebug'
 
@@ -11,5 +13,5 @@ def solution(n)
     m += 1
     sum += m
   end
-   m
+  m
 end

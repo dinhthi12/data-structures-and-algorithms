@@ -1,4 +1,6 @@
-#Tính S(n) = x + x^2 + x^3 + … + x^n
+# frozen_string_literal: true
+
+# Tính S(n) = x + x^2 + x^3 + … + x^n
 
 def solution(x, n)
   result = 0

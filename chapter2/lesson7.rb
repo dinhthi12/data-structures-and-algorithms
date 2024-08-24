@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 # Hãy sử dụnɡ vònɡ lặp for để xuất tất cả các ký tự từ A đến Z
 
 def solution
- for char in 'A'..'Z'
-   puts char
- end
+  ('A'..'Z').each do |char|
+    puts char
+  end
 end

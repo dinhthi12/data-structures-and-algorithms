@@ -1,10 +1,13 @@
+# frozen_string_literal: true
+
 # Tính S(n) = 1 + ½ + 1/3 + … + 1/n
 
 def solution(n)
-  return 0 if n == 0
+  return 0 if n.zero?
+
   result = 0
-  for i in 1..n do
-    result = result + 1/i.to_f
+  (1..n).each do |i|
+    result += 1 / i.to_f
   end
-   result
+  result
 end

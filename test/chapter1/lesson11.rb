@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../../chapter1/lesson11'
 
 describe 'solution' do

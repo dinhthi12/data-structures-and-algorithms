@@ -1,14 +1,15 @@
-class People
+# frozen_string_literal: true
 
+class People
   def initialize(id, name)
     @id = id
     @name = name
   end
 
   def input
-    puts "Enter id:"
+    puts 'Enter id:'
     @id = gets.chomp.to_i
-    puts "Enter name:"
+    puts 'Enter name:'
     @name = gets.chomp
   end
 

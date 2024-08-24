@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 # Tính S(n) = 1^3 + 2^3 + … + N^3
 
 def solution(n)
   result = 0
-  for i in 1..n do
-    result = result + i**3
+  (1..n).each do |i|
+    result += i**3
   end
-   result
+  result
 end
