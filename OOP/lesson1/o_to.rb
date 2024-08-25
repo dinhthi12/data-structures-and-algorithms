@@ -18,8 +18,6 @@ class OTo < TransportationMeans
 
     puts table
 
-    print 'id:'
-    id = gets.chomp.to_i
     print 'Manufacturer:'
     manufacturer = gets.chomp
     print 'Vehicle name:'
@@ -45,7 +43,6 @@ class OTo < TransportationMeans
     puts table
 
     OTo.new(
-      id: id,
       manufacturer: manufacturer,
       vehicle_name: vehicle_name,
       year_of_manufacture: year_of_manufacture,
@@ -53,7 +50,7 @@ class OTo < TransportationMeans
       seat_number: seat_number,
       engine_type: engine_type
     )
-    end
+  end
 
   def output
     super
@@ -77,14 +74,9 @@ class OTo < TransportationMeans
   end
 
   def to_json(options = {})
-    {
-      id: @id,
-      manufacturer: @manufacturer,
-      vehicle_name: @vehicle_name,
-      year_of_manufacture: @year_of_manufacture,
-      max_speed: @max_speed,
+    super.merge(
       seat_number: @seat_number,
       engine_type: @engine_type
-    }.to_json(options)
+    ).to_json(options)
   end
 end

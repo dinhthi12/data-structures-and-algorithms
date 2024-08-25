@@ -1,22 +1,21 @@
 # frozen_string_literal: true
+require 'securerandom'
 
 # TransportationMeans class serves as a base class for different types of transportation
 # vehicles, holding common attributes like manufacturer, vehicle name, year of manufacture, and max speed.
 class TransportationMeans
   attr_accessor :id, :manufacturer, :vehicle_name, :year_of_manufacture, :max_speed
 
-  @@last_id = 0
-
   def initialize(params = {})
-    @id = params[:id]
+    @id = params[:id] || generate_unique_id
     @manufacturer = params[:manufacturer]
     @vehicle_name = params[:vehicle_name]
     @year_of_manufacture = params[:year_of_manufacture]
     @max_speed = params[:max_speed]
   end
 
-  def generate_id
-    @@last_id += 1
+  def generate_unique_id
+    SecureRandom.uuid
   end
 
   def input
@@ -52,6 +51,7 @@ class TransportationMeans
 
   def to_json(options = {})
     {
+      id: @id,
       manufacturer: @manufacturer,
       vehicle_name: @vehicle_name,
       year_of_manufacture: @year_of_manufacture,

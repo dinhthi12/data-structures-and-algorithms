@@ -20,18 +20,26 @@ def save_data(new_data)
     existing_data = []
   end
 
-  new_data_hash = new_data.map(&:to_h)
-
-  new_data_hash.each do |new_entry|
-    unless existing_data.any? { |existing_entry| existing_entry["id"] == new_entry["id"]}
-      existing_data << new_entry
-    end
+  # Chuyển đổi dữ liệu mới thành hash với ID là key
+  new_data_hash = new_data.map(&:to_h).each_with_object({}) do |entry, hash|
+    hash[entry["id"]] = entry
   end
+
+  # Tạo một hash để kiểm tra trùng lặp ID từ dữ liệu hiện tại
+  existing_data_hash = existing_data.each_with_object({}) do |entry, hash|
+    hash[entry["id"]] = entry
+  end
+
+  # Kết hợp dữ liệu hiện tại với dữ liệu mới
+  combined_data = existing_data_hash.merge(new_data_hash).values
+
   # Ghi dữ liệu mới vào tệp data.json
   File.open(file_path, 'w') do |file|
-    file.puts JSON.pretty_generate(existing_data)
+    file.puts JSON.pretty_generate(combined_data)
   end
 end
+
+
 
 def display_data(data)
   rows = data.map(&:values)

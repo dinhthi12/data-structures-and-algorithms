@@ -1,38 +1,29 @@
 [
   {
-    "id": "1",
+    "id": "9b65c125-11c4-4a8b-88b7-af7310d7f3a4",
     "manufacturer": "Honda",
-    "vehicle_name": "Civic Black 2013",
-    "year_of_manufacture": 2010,
+    "vehicle_name": "Civic Type R",
+    "year_of_manufacture": 2020,
+    "max_speed": 200.0,
+    "seat_number": 4,
+    "engine_type": "Hybrid"
+  },
+  {
+    "id": "bf0a0d57-17c0-4286-aef4-92275f257193",
+    "manufacturer": "Toyota",
+    "vehicle_name": "Cross",
+    "year_of_manufacture": 2023,
     "max_speed": 200.0,
     "seat_number": 5,
     "engine_type": "Hybrid"
   },
   {
-    "id": 2,
-    "manufacturer": "Toyota",
-    "vehicle_name": "Cross",
-    "year_of_manufacture": 2001,
-    "max_speed": 180.0,
-    "seat_number": null,
-    "engine_type": null
-  },
-  {
-    "id": 3,
-    "manufacturer": "Honda",
-    "vehicle_name": "Civic",
-    "year_of_manufacture": 2001,
-    "max_speed": 190.0,
-    "seat_number": null,
-    "engine_type": null
-  },
-  {
-    "id": 4,
-    "manufacturer": "Honda",
-    "vehicle_name": "CIvic",
-    "year_of_manufacture": 2001,
-    "max_speed": 190.0,
-    "seat_number": 5,
-    "engine_type": "Hybird"
+    "id": "1eb98d2f-f983-4be7-be37-12246c14a0a6",
+    "manufacturer": "VinFast",
+    "vehicle_name": "VF3",
+    "year_of_manufacture": 2024,
+    "max_speed": 150.0,
+    "seat_number": 4,
+    "engine_type": "Hybrid"
   }
 ]
