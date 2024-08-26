@@ -23,22 +23,8 @@ class OTo < TransportationMeans
     end
     puts title
 
-    # Sử dụng TTY::Prompt để nhập dữ liệu từ người dùng
-    manufacturer = prompt.ask('Manufacturer:'.colorize(:cyan), required: true) do |q|
-      q.validate(/.+/, 'Manufacturer cannot be empty.')
-    end
-
-    vehicle_name = prompt.ask('Vehicle name:'.colorize(:cyan), required: true) do |q|
-      q.validate(/.+/, 'Vehicle name cannot be empty.')
-    end
-
-    year_of_manufacture = prompt.ask('Year of manufacture:'.colorize(:cyan), convert: :int, required: true) do |q|
-      q.validate(/^\d{4}$/, 'Year of manufacture must be a 4-digit number.')
-    end
-
-    max_speed = prompt.ask('Maximum speed:'.colorize(:cyan), convert: :float, required: true) do |q|
-      q.validate(/^\d+(\.\d+)?$/, 'Maximum speed must be a number.')
-    end
+    # Use the input method from the parent class for common attributes
+    vehicle_data = super()
 
     seat_number = prompt.ask('Seat number:'.colorize(:cyan), convert: :int, required: true) do |q|
       q.validate(/^\d+$/, 'Seat number must be an integer.')
@@ -47,33 +33,43 @@ class OTo < TransportationMeans
     engine_types = ['Petrol', 'Diesel', 'Electric', 'Hybrid']
     engine_type = prompt.select('Engine type:'.colorize(:cyan), engine_types, required: true)
 
-    # Hiển thị thông tin vừa nhập
+    # Display the combined information
     table = Terminal::Table.new do |t|
-      t.title = "Vehicle information".colorize(:cyan)
-      t.add_row ['Manufacturer:', manufacturer.ljust(45).colorize(:yellow)]
-      t.add_row ['Vehicle name:', vehicle_name.ljust(45).colorize(:yellow)]
-      t.add_row ['Year of manufacture:', year_of_manufacture.to_s.ljust(45).colorize(:yellow)]
-      t.add_row ['Maximum speed:', max_speed.to_s.ljust(45).colorize(:yellow)]
+      t.title = "Vehicle Information".colorize(:cyan)
+      t.add_row ['Manufacturer:', vehicle_data[:manufacturer].ljust(45).colorize(:yellow)]
+      t.add_row ['Vehicle name:', vehicle_data[:vehicle_name].ljust(45).colorize(:yellow)]
+      t.add_row ['Year of manufacture:', vehicle_data[:year_of_manufacture].to_s.ljust(45).colorize(:yellow)]
+      t.add_row ['Maximum speed:', vehicle_data[:max_speed].to_s.ljust(45).colorize(:yellow)]
       t.add_row ['Seat number:', seat_number.to_s.ljust(45).colorize(:yellow)]
       t.add_row ['Engine type:', engine_type.ljust(45).colorize(:yellow)]
     end
     puts table
 
-    # Tạo và trả về đối tượng OTo với thông tin vừa nhập
+    # Return a new OTo object with all the gathered information
     OTo.new(
-      manufacturer: manufacturer,
-      vehicle_name: vehicle_name,
-      year_of_manufacture: year_of_manufacture,
-      max_speed: max_speed,
+      manufacturer: vehicle_data[:manufacturer],
+      vehicle_name: vehicle_data[:vehicle_name],
+      year_of_manufacture: vehicle_data[:year_of_manufacture],
+      max_speed: vehicle_data[:max_speed],
       seat_number: seat_number,
       engine_type: engine_type
     )
   end
 
   def output
+    # Gọi phương thức output của lớp cha để hiển thị thông tin cơ bản
     super
-    puts "Seating Capacity: #{@seat_number}"
-    puts "Engine Type: #{@engine_type}"
+
+    # Tạo bảng với thông tin bổ sung
+    table = Terminal::Table.new do |t|
+      t.add_row ['Seating Capacity:', @seat_number.to_s.colorize(:yellow)]
+      t.add_row ['Engine Type:', @engine_type.colorize(:yellow)]
+
+      # Thêm dòng kẻ phân cách giữa các thông tin
+      t.style = { all_separators: true }
+    end
+
+    puts table
   end
 
   def base_speed

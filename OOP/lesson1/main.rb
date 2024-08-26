@@ -56,12 +56,33 @@ def display_error(message)
   puts message.colorize(:red)
 end
 
-def display_data(data)
+def display_data
+  file_path = data_file_path
+
+  # Kiểm tra xem tệp data.json đã tồn tại hay không
+  unless File.exist?(file_path)
+    return puts "No data available".colorize(:red)
+  end
+
+  # Đọc dữ liệu từ tệp data.json
+  data = JSON.parse(File.read(file_path))
+
   return puts "No data available".colorize(:red) if data.empty?
 
-  rows = data.map { |d| d.values }
-  headings = data.first.keys
-  table = Terminal::Table.new(headings: headings, rows: rows)
+  # Lấy tiêu đề và các hàng dữ liệu
+  headings = data.first.keys # Các khóa trong đối tượng JSON sẽ là tiêu đề cột
+  rows = data.each_with_index.map do |item, index|
+    [index + 1] + item.values # Thay thế ID bằng số thứ tự và lấy các giá trị
+  end
+
+  # Tạo bảng với tiêu đề và các hàng dữ liệu
+  table = Terminal::Table.new do |t|
+    t.title = "Vehicle Data".colorize(:cyan)
+    t.headings = ['No.'] + headings # Thay 'ID' bằng 'No.'
+    t.rows = rows
+    t.style = { all_separators: true } # Thêm dòng kẻ phân cách
+  end
+
   puts table
 end
 
@@ -105,7 +126,13 @@ def main
     when 3
       puts "\n"
     when 4
-      puts "\n"
+      begin
+        display_data
+        display_success("Display information successfully! \u{2705}") # checked
+      rescue => e
+        display_error("Failed to display information: #{e.message}")
+      end
+      break unless continue?
     when 6
       display_success("Exiting...")
       break

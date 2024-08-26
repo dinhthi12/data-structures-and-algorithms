@@ -16,5 +16,23 @@
     "max_speed": 200.0,
     "seat_number": 4,
     "engine_type": "Electric"
+  },
+  {
+    "id": "c8d83b52-517b-426d-9ea5-daaee19b0770",
+    "manufacturer": "Honda",
+    "vehicle_name": "Cov",
+    "year_of_manufacture": 2023,
+    "max_speed": 100.0,
+    "seat_number": 4,
+    "engine_type": "Petrol"
+  },
+  {
+    "id": "be3c21b2-1f1d-46ba-a655-fa4a4094a4d5",
+    "manufacturer": "Honda",
+    "vehicle_name": "Civic",
+    "year_of_manufacture": 2023,
+    "max_speed": 200.0,
+    "seat_number": 4,
+    "engine_type": "Electric"
   }
 ]
