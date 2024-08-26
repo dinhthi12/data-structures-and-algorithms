@@ -69,10 +69,28 @@ def display_data
 
   return puts "No data available".colorize(:red) if data.empty?
 
-  # Lấy tiêu đề và các hàng dữ liệu
-  headings = data.first.keys # Các khóa trong đối tượng JSON sẽ là tiêu đề cột
+  # Ánh xạ các khóa với tiêu đề mong muốn
+  headings_map = {
+    'vehicle_name' => 'Vehicle name',
+    'year_of_manufacture' => 'Year of manufacture',
+    'max_speed' => 'Max speed',
+    'seat_number' => 'Seat number',
+    'engine_type' => 'Engine type'
+  }
+
+  # Lấy tiêu đề từ khóa và áp dụng mapping
+  headings = data.first.keys.map do |key|
+    headings_map[key] || key.split('_').map(&:capitalize).join(' ')
+  end
+
+  # Tạo hàng dữ liệu với số thứ tự
   rows = data.each_with_index.map do |item, index|
-    [index + 1] + item.values # Thay thế ID bằng số thứ tự và lấy các giá trị
+    values = item.values
+    # Thêm "km/h" vào giá trị của Max speed
+    if item['max_speed']
+      values[headings.index('Max speed') - 1] = values[headings.index('Max speed') - 1].to_s + " km/h"
+    end
+    [index + 1] + values # Thay thế ID bằng số thứ tự và lấy các giá trị
   end
 
   # Tạo bảng với tiêu đề và các hàng dữ liệu
@@ -85,6 +103,7 @@ def display_data
 
   puts table
 end
+
 
 def display_menu
   menu = Terminal::Table.new do |t|
@@ -127,8 +146,9 @@ def main
       puts "\n"
     when 4
       begin
-        display_data
-        display_success("Display information successfully! \u{2705}") # checked
+        if display_data
+          display_success("Display information successfully! \u{2705}") # checked
+        end
       rescue => e
         display_error("Failed to display information: #{e.message}")
       end

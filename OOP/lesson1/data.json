@@ -1,38 +1,11 @@
 [
   {
-    "id": "0dd4397e-69c9-483d-9a1e-0ed9d80849ea",
+    "id": "768bc95b-342c-4f9f-af8c-fcd8b7f06e95",
     "manufacturer": "Honda",
     "vehicle_name": "Civic Type R",
     "year_of_manufacture": 2023,
     "max_speed": 200.0,
     "seat_number": 4,
     "engine_type": "Hybrid"
-  },
-  {
-    "id": "4ffc2b31-b26b-4b58-aff7-874d2692a940",
-    "manufacturer": "Toyota",
-    "vehicle_name": "wigo 2023",
-    "year_of_manufacture": 2023,
-    "max_speed": 200.0,
-    "seat_number": 4,
-    "engine_type": "Electric"
-  },
-  {
-    "id": "c8d83b52-517b-426d-9ea5-daaee19b0770",
-    "manufacturer": "Honda",
-    "vehicle_name": "Cov",
-    "year_of_manufacture": 2023,
-    "max_speed": 100.0,
-    "seat_number": 4,
-    "engine_type": "Petrol"
-  },
-  {
-    "id": "be3c21b2-1f1d-46ba-a655-fa4a4094a4d5",
-    "manufacturer": "Honda",
-    "vehicle_name": "Civic",
-    "year_of_manufacture": 2023,
-    "max_speed": 200.0,
-    "seat_number": 4,
-    "engine_type": "Electric"
   }
 ]
