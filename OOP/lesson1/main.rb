@@ -4,6 +4,9 @@ require_relative 'transportation_means'
 require_relative 'o_to'
 require 'json'
 require 'terminal-table'
+require 'byebug'
+require 'tty-prompt'
+require 'colorize'
 
 def data_file_path
   File.join(File.dirname(__FILE__), 'data.json')
@@ -39,10 +42,24 @@ def save_data(new_data)
   end
 end
 
+def continue?
+  puts "Do you want to continue? (Y/N)"
+  continue  = gets.chomp.upcase
+  continue == "Y"
+end
 
+def display_success(message)
+  puts message.colorize(:green)
+end
+
+def display_error(message)
+  puts message.colorize(:red)
+end
 
 def display_data(data)
-  rows = data.map(&:values)
+  return puts "No data available".colorize(:red) if data.empty?
+
+  rows = data.map { |d| d.values }
   headings = data.first.keys
   table = Terminal::Table.new(headings: headings, rows: rows)
   puts table
@@ -50,17 +67,17 @@ end
 
 def display_menu
   menu = Terminal::Table.new do |t|
-    t << ['Menu'.ljust(66)]
-    t.add_separator
-    t.add_row ['1. Enter vehicle information']
-    t.add_row ['2. Display vehicle information']
-    t.add_row ['3. Enter information for n car objects']
-    t.add_row ['4. Display information of n car objects with base speed']
-    t.add_row ['5. Sort the list of cars by base speed in descending order']
-    t.add_row ['6. Exit']
+    t.title = 'Vehicle Management Menu'.colorize(:cyan)
+    t.headings = ['Option', 'Description']
+    t.add_row ['1', 'Enter information for 1 vehicle object']
+    t.add_row ['2', 'Display information for vehicle object by ID']
+    t.add_row ['3', 'Enter information for n vehicle objects']
+    t.add_row ['4', 'Display information for all vehicle objects with base speed']
+    t.add_row ['5', 'Sort vehicle list by base speed in descending order']
+    t.add_row ['6', 'Exit']
   end
   puts menu
-  print 'Select function: '
+  print 'Select function: '.colorize(:green)
 end
 
 def main
@@ -72,53 +89,25 @@ def main
 
     case choice
     when 1
-      puts "\n"
-      oto = OTo.input
-
-      break  if oto.nil?
-
-      vehicle << oto
-
-      save_data(vehicle)
-      puts "\n"
+      begin
+        puts "\n"
+        oto = OTo.input
+        break  if oto.nil?
+        vehicle << oto
+        save_data(vehicle)
+        display_success("Car added successfully! \u{1F697}") # Xe hơi icon
+      rescue => e
+        display_error("Failed to add car: #{e.message}")
+      end
+      break unless continue?
     when 2
       puts "\n"
-      data = load_data
-      display_data(data)
-      puts "\n"
     when 3
-      n = nil
-      loop do
-        print 'Enter the number of cars: '
-        n = gets.chomp
-        # Kiểm tra n có phải là số nguyên dương không
-        break if n.match?(/^\d+$/) && n.to_i.positive?
-
-        puts 'Please enter a positive integer.'
-      end
-      cars = []
-      n.to_i.times do
-        cars << input_car_info
-      end
       puts "\n"
     when 4
-      data = load_data
-      # Hiển thị thông tin của n đối tượng OTO cùng với vận tốc cơ sở
-      data.each do |oto|
-        puts "Manufacturer: #{oto['manufacturer']}, Vehicle name: #{oto['vehicle_name']}, Base speed: #{oto['max_speed']}"
-      end
-      puts "\n"
-    when 5
-      data = load_data
-      # Sắp xếp danh sách các đối tượng OTO theo thứ tự giảm dần của vận tốc cơ sở
-      sorted_data = data.sort_by { |oto| -oto['max_speed'] }
-      # Hiển thị danh sách đã sắp xếp
-      puts 'Sorted list of cars by base speed in descending order:'
-      sorted_data.each do |oto|
-        puts "Manufacturer: #{oto['manufacturer']}, Vehicle name: #{oto['vehicle_name']}, Base speed: #{oto['max_speed']}"
-      end
       puts "\n"
     when 6
+      display_success("Exiting...")
       break
     else
       puts 'Invalid function. Please select again.'

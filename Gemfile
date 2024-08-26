@@ -14,4 +14,7 @@ gem 'byebug', '~> 11.1', '>= 11.1.3'
 gem 'terminal-table', '~> 1.8'
 # Ruby code formatter
 gem 'rubocop', require: false
-
+# A beautiful and powerful interactive command line prompt with a robust API for getting and validating complex inputs.
+gem 'tty-prompt', '~> 0.23.1'
+# Extends String class or add a ColorizedString with methods to set text color, background color and text effects.
+gem 'colorize', '~> 0.8.1'
