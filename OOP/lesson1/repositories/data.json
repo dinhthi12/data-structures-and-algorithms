@@ -1,0 +1,38 @@
+[
+  {
+    "id": "57e193a0-8922-435d-acca-8f6b420f746a",
+    "manufacturer": "Toyota",
+    "vehicle_name": "Camry",
+    "year_of_manufacture": 2020,
+    "max_speed": 200,
+    "seat_number": 5,
+    "engine_type": "Hybrid"
+  },
+  {
+    "id": "5141bff7-59e2-4feb-b3bb-54f54aa90329",
+    "manufacturer": "Toyota",
+    "vehicle_name": "Camry",
+    "year_of_manufacture": 2020,
+    "max_speed": 200,
+    "seat_number": 5,
+    "engine_type": "Hybrid"
+  },
+  {
+    "id": "d992b9ee-6ac2-42b0-a3f9-6a3c7e07d056",
+    "manufacturer": "Honda",
+    "vehicle_name": "Civic",
+    "year_of_manufacture": 2019,
+    "max_speed": 190,
+    "seat_number": 5,
+    "engine_type": "Petrol"
+  },
+  {
+    "id": "b06fc2e9-8fb0-49e8-842c-c83be5d58279",
+    "manufacturer": "Ford",
+    "vehicle_name": "Mustang",
+    "year_of_manufacture": 2021,
+    "max_speed": 250,
+    "seat_number": 4,
+    "engine_type": "Petrol"
+  }
+]
