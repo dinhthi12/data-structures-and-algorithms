@@ -5,9 +5,7 @@ require_relative './services/vehicle_service'
 
 def main
   controller = VehicleController.new
-  file_path = 'data.json'
-  repository = VehicleRepository.new(file_path)
-  service = VehicleService.new(repository)
+
   loop do
     controller.display_menu
     choice = gets.chomp.to_i
@@ -15,39 +13,7 @@ def main
     case choice
     when 1
       begin
-        # Ví dụ thêm phương tiện
-        vehicles_data = [
-          {
-            manufacturer: "Toyota",
-            vehicle_name: "Camry",
-            year_of_manufacture: 2020,
-            max_speed: 200,
-            seat_number: 5,
-            engine_type: "Hybrid"
-          },
-          {
-            manufacturer: "Honda",
-            vehicle_name: "Civic",
-            year_of_manufacture: 2019,
-            max_speed: 190,
-            seat_number: 5,
-            engine_type: "Petrol"
-          },
-          {
-            manufacturer: "Ford",
-            vehicle_name: "Mustang",
-            year_of_manufacture: 2021,
-            max_speed: 250,
-            seat_number: 4,
-            engine_type: "Petrol"
-          }
-        ]
-
-        vehicles_data.each do |data|
-          vehicle = OTo.new(data)
-          service.add_vehicle(vehicle)
-        end
-
+        controller.add_vehicle
         controller.display_success("Car added successfully! \u{1F697}")
       rescue => e
         controller.display_error("Failed to add car: #{e.message}")

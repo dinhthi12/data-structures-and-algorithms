@@ -12,6 +12,7 @@ class VehicleController
     repository = VehicleRepository.new(file_path)
     @service = VehicleService.new(repository)
   end
+
   def display_menu
       menu = Terminal::Table.new do |t|
         t.title = 'Vehicle Management Menu'.colorize(:cyan)
@@ -59,5 +60,11 @@ class VehicleController
     else
       display_error("No vehicle found with name: #{name}")
     end
+  end
+
+  def add_vehicle
+    vehicle = @service.input # Thu thập thông tin và tạo đối tượng
+    @service.add_vehicle(vehicle)
+    display_success("Vehicle successfully added!")
   end
 end
