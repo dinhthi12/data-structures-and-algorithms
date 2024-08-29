@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'securerandom'
 
 # Transportation means class serves as a base class for different types of transportation

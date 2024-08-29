@@ -16,5 +16,23 @@
     "max_speed": 200,
     "seat_number": 4,
     "engine_type": "Hybrid"
+  },
+  {
+    "id": "75481409-88bb-4962-b0c7-dbbe3791b2a0",
+    "manufacturer": "VinFast",
+    "vehicle_name": "VF3",
+    "year_of_manufacture": 2023,
+    "max_speed": 140,
+    "seat_number": 3,
+    "engine_type": "Electric"
+  },
+  {
+    "id": "0c57374f-70ec-47d3-b083-fe90e091fe19",
+    "manufacturer": "Tesla",
+    "vehicle_name": "Cybertruck",
+    "year_of_manufacture": 2023,
+    "max_speed": 200,
+    "seat_number": 4,
+    "engine_type": "Electric"
   }
 ]

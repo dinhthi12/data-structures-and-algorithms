@@ -1,9 +1,11 @@
 # frozen_string_literal: true
+
 require 'json'
 
 require_relative './../models/transportation_means'
 require_relative './../models/o_to'
 
+# VehicleRepository is responsible for loading and saving vehicle data to a file.
 class VehicleRepository
   def initialize(file_path)
     @file_path = File.join(File.dirname(__FILE__), file_path)

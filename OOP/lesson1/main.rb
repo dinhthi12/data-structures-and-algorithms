@@ -9,40 +9,28 @@ def main
     controller.display_menu
     choice = gets.chomp.to_i
 
-    case choice
-    when 1
-      begin
-        controller.add_vehicle
-      rescue => e
-        controller.display_error("Failed to add car: #{e.message}")
-      end
-      break unless controller.continue?
-    when 2
-    begin
-      controller.display_success("Display information successfully! \u{2705}")
-    rescue => e
-      controller.display_error("Failed to display information: #{e.message}")
-    end
-    when 3
-      begin
-      rescue => e
-        controller.display_error("Failed to display information: #{e.message}")
-      end
-      break unless controller.continue?
+    handle_choice(controller, choice)
 
-    when 4
-      begin
-      rescue => e
-        controller.display_error("Failed to display information: #{e.message}")
-      end
-      break unless controller.continue?
-    when 6
-      controller.display_success("Exiting...")
-      break
-    else
-      puts 'Invalid function. Please select again.'
-    end
+    break unless controller.continue?
   end
+end
+
+def handle_choice(controller, choice)
+  case choice
+  when 1
+    safely_execute(controller, :add_vehicle, 'Failed to add car')
+  when 6
+    controller.display_success('Exiting...')
+  else
+    puts 'Invalid function. Please select again.'
+  end
+end
+
+def safely_execute(controller, method_name, error_message)
+  yield if block_given?
+  controller.send(method_name)
+rescue StandardError => e
+  controller.display_error("#{error_message}: #{e.message}")
 end
 
 main
