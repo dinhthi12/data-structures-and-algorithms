@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 require 'json'
-require 'byebug'
+
+require_relative './../models/transportation_means'
+require_relative './../models/o_to'
 
 class VehicleRepository
   def initialize(file_path)

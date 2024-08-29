@@ -1,8 +1,8 @@
 # frozen_string_literal: true
-require_relative './../repositories/vehicle_repository'
-require 'byebug'
 require 'tty-prompt'
 require 'terminal-table'
+
+require_relative './../repositories/vehicle_repository'
 
 class VehicleService
   def initialize(repository)
@@ -23,7 +23,7 @@ class VehicleService
       q.validate(/^\d+$/, 'Seat number must be an integer.')
     end
 
-    engine_types = ['Petrol', 'Diesel', 'Electric', 'Hybrid']
+    engine_types = %w[Petrol Diesel Electric Hybrid]
     engine_type = @prompt.select('Engine type:', engine_types, required: true)
 
     # Tạo đối tượng OTo
@@ -41,15 +41,5 @@ class VehicleService
     vehicles = @repository.load_data
     vehicles << vehicle
     @repository.save_data(vehicles)
-  end
-
-  def find_by_id(id)
-    vehicles = @repository.load_data
-    vehicles.find { |vehicle| vehicle[:id] == id }
-  end
-
-  def find_by_name(name)
-    vehicles = @repository.load_data
-    vehicles.select { |vehicle| vehicle[:vehicle_name].downcase.include?(name.downcase) }
   end
 end

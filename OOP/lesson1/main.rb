@@ -1,7 +1,6 @@
+# frozen_string_literal: true
+
 require_relative './controllers/vehicle_controller'
-require_relative './models/transportation_means'
-require_relative './models/o_to'
-require_relative './services/vehicle_service'
 
 def main
   controller = VehicleController.new
@@ -14,7 +13,6 @@ def main
     when 1
       begin
         controller.add_vehicle
-        controller.display_success("Car added successfully! \u{1F697}")
       rescue => e
         controller.display_error("Failed to add car: #{e.message}")
       end
@@ -27,9 +25,6 @@ def main
     end
     when 3
       begin
-        print 'Enter vehicle ID: '
-        id = gets.chomp
-        controller.display_vehicle_by_id(id)
       rescue => e
         controller.display_error("Failed to display information: #{e.message}")
       end
@@ -37,9 +32,6 @@ def main
 
     when 4
       begin
-        print 'Enter vehicle name: '
-        name = gets.chomp
-        controller.display_vehicle_by_name(name)
       rescue => e
         controller.display_error("Failed to display information: #{e.message}")
       end

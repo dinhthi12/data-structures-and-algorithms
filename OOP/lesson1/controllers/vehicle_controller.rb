@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'terminal-table'
 require 'byebug'
 require 'tty-prompt'
@@ -42,29 +43,9 @@ class VehicleController
     continue == "Y"
   end
 
-  def display_vehicle_by_id(id)
-    vehicle = @service.find_by_id(id)
-    if vehicle
-      puts "Vehicle found: #{vehicle}"
-    else
-      display_error("No vehicle found with ID: #{id}")
-    end
-  end
-
-  def display_vehicle_by_name(name)
-    vehicles = @service.find_by_name(name)
-    if vehicles.any?
-      vehicles.each do |vehicle|
-        puts "Vehicle found: #{vehicle}"
-      end
-    else
-      display_error("No vehicle found with name: #{name}")
-    end
-  end
-
   def add_vehicle
     vehicle = @service.input # Thu thập thông tin và tạo đối tượng
     @service.add_vehicle(vehicle)
-    display_success("Vehicle successfully added!")
+    display_success("Car added successfully! \u{1F697}")
   end
 end

@@ -1,6 +1,6 @@
 [
   {
-    "id": "60bf80ee-6b1b-4218-b87b-5fb741a4c148",
+    "id": "741bbfad-6163-40c0-a479-80f1a98ff2a4",
     "manufacturer": "Honda",
     "vehicle_name": "Civic Type R",
     "year_of_manufacture": 2023,
@@ -9,12 +9,12 @@
     "engine_type": "Hybrid"
   },
   {
-    "id": "cf6900d4-06a4-4ac1-a037-6d9a5cd6f0be",
-    "manufacturer": "Vinfast",
-    "vehicle_name": "VF3",
-    "year_of_manufacture": 2024,
-    "max_speed": 140,
-    "seat_number": 3,
-    "engine_type": "Electric"
+    "id": "c90a7342-ba92-4d5d-8f70-72a56181080b",
+    "manufacturer": "Toyota",
+    "vehicle_name": "Camry",
+    "year_of_manufacture": 2023,
+    "max_speed": 200,
+    "seat_number": 4,
+    "engine_type": "Hybrid"
   }
 ]
