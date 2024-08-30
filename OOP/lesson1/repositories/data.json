@@ -34,5 +34,14 @@
     "max_speed": 200,
     "seat_number": 4,
     "engine_type": "Electric"
+  },
+  {
+    "id": "11d135f7-8e1c-4b92-a112-00c264036dd5",
+    "manufacturer": "BMW",
+    "vehicle_name": "G70 Body kit",
+    "year_of_manufacture": 2020,
+    "max_speed": 230,
+    "seat_number": 4,
+    "engine_type": "Diesel"
   }
 ]

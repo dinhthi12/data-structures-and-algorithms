@@ -26,6 +26,42 @@ class VehicleService
     @repository.save_data(vehicles)
   end
 
+  def display_vehicles
+    vehicles = @repository.load_data
+
+    if vehicles.empty?
+      puts "No vehicles found."
+    else
+      headings = ['No.', 'Manufacturer', 'Vehicle Name', 'Year', 'Max Speed', 'Base Speed', 'Seats', 'Engine Type']
+
+      rows = vehicles.each_with_index.map do |vehicle, index|
+        # Tạo đối tượng OTo từ dữ liệu JSON
+        o_to = OTo.new(vehicle)
+
+        # Lấy các giá trị cần thiết và tính toán base_speed
+        values = [
+          o_to.manufacturer,
+          o_to.vehicle_name,
+          o_to.year_of_manufacture,
+          o_to.max_speed.to_s + ' km/h', # Thêm "km/h" vào giá trị của Max Speed
+          o_to.base_speed.to_s + ' km/h', # Tính toán và thêm "km/h" vào giá trị của Base Speed
+          o_to.seat_number,
+          o_to.engine_type
+        ]
+
+        [index + 1] + values # Thêm cột No. tự động tăng và thêm các giá trị của các cột
+      end
+
+      table = Terminal::Table.new(
+        headings: headings,
+        rows: rows
+      )
+
+      puts table
+    end
+  end
+
+
   private
 
   def collect_vehicle_data

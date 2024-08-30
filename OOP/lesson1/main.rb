@@ -19,6 +19,8 @@ def handle_choice(controller, choice)
   case choice
   when 1
     safely_execute(controller, :add_vehicle, 'Failed to add car')
+  when 4
+    safely_execute(controller, :display_vehicles, 'Failed to display information car')
   when 6
     controller.display_success('Exiting...')
   else

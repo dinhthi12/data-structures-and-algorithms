@@ -1,15 +1,12 @@
 # frozen_string_literal: true
 
 require 'terminal-table'
-require 'byebug'
-require 'tty-prompt'
 require 'colorize'
 
 require_relative './../repositories/vehicle_repository'
 require_relative './../services/vehicle_service'
 
 # This class is responsible for controlling the flow of vehicle-related operations,
-# such as adding vehicles and displaying vehicle information.
 class VehicleController
   def initialize
     file_path = 'data.json'
@@ -43,6 +40,10 @@ class VehicleController
     display_success("Car added successfully! \u{1F697}")
   end
 
+  def display_vehicles
+    @service.display_vehicles
+    display_success("Display information cars successfully! \u{1F697}")
+  end
   private
 
   def build_menu
