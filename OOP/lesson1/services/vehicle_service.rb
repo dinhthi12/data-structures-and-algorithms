@@ -35,21 +35,19 @@ class VehicleService
       headings = ['No.', 'Manufacturer', 'Vehicle Name', 'Year', 'Max Speed', 'Base Speed', 'Seats', 'Engine Type']
 
       rows = vehicles.each_with_index.map do |vehicle, index|
-        # Tạo đối tượng OTo từ dữ liệu JSON
         o_to = OTo.new(vehicle)
 
-        # Lấy các giá trị cần thiết và tính toán base_speed
         values = [
           o_to.manufacturer,
           o_to.vehicle_name,
           o_to.year_of_manufacture,
-          o_to.max_speed.to_s + ' km/h', # Thêm "km/h" vào giá trị của Max Speed
-          o_to.base_speed.to_s + ' km/h', # Tính toán và thêm "km/h" vào giá trị của Base Speed
+          o_to.max_speed.to_s + ' km/h',
+          o_to.base_speed.to_s + ' km/h',
           o_to.seat_number,
           o_to.engine_type
         ]
 
-        [index + 1] + values # Thêm cột No. tự động tăng và thêm các giá trị của các cột
+        [index + 1] + values
       end
 
       table = Terminal::Table.new(
@@ -61,8 +59,46 @@ class VehicleService
     end
   end
 
+  def sort_vehicles_by_base_speed
+    sort_order = @prompt.select('Select sort order:', ['Ascending', 'Descending'])
+
+    vehicles = @repository.load_data
+    return puts 'No vehicles found.' if vehicles.empty?
+
+    sorted_vehicles =  vehicles.map { |vehicle| OTo.new(vehicle)}
+
+    sorted_vehicles.sort_by!(&:base_speed)
+    sorted_vehicles.reverse! if sort_order == 'Descending'
+
+    display_sorted_vehicles(sorted_vehicles)
+  end
 
   private
+
+  def display_sorted_vehicles(sorted_vehicles)
+    headings = ['No.', 'Manufacturer', 'Vehicle Name', 'Year', 'Max Speed', 'Base Speed', 'Seats', 'Engine Type']
+
+    rows = sorted_vehicles.each_with_index.map do |vehicle, index|
+      values = [
+        vehicle.manufacturer,
+        vehicle.vehicle_name,
+        vehicle.year_of_manufacture,
+        vehicle.max_speed.to_s + ' km/h',
+        vehicle.base_speed.to_s + ' km/h',
+        vehicle.seat_number,
+        vehicle.engine_type
+      ]
+
+      [index + 1] + values
+    end
+
+    table = Terminal::Table.new(
+      headings: headings,
+      rows: rows
+    )
+
+    puts table
+  end
 
   def collect_vehicle_data
     {

@@ -35,7 +35,7 @@ class VehicleController
   end
 
   def add_vehicle
-    vehicle = @service.input # Thu thập thông tin và tạo đối tượng
+    vehicle = @service.input
     @service.add_vehicle(vehicle)
     display_success("Car added successfully! \u{1F697}")
   end
@@ -44,6 +44,11 @@ class VehicleController
     @service.display_vehicles
     display_success("Display information cars successfully! \u{1F697}")
   end
+
+  def sort_vehicle_by_base_speed
+    @service.sort_vehicles_by_base_speed
+    display_success("Sort list information cars successfully! \u{1F697}")
+  end
   private
 
   def build_menu
@@ -51,7 +56,7 @@ class VehicleController
       t.title = 'Vehicle Management Menu'.colorize(:cyan)
       t.headings = %w[Option Description]
       t.add_row ['1', 'Enter information for 1 vehicle object']
-      t.add_row ['2', 'Display information for vehicle object by ID']
+      t.add_row ['2', 'Sort vehicles by base speed (Ascending/Descending)']
       t.add_row ['3', 'Enter information for n vehicle objects']
       t.add_row ['4', 'Display information for all vehicle objects with base speed']
       t.add_row ['5', 'Sort vehicle list by base speed in descending order']
