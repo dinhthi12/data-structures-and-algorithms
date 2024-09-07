@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative './controllers/vehicle_controller'
+require_relative '../../oop/lesson1/controllers/vehicle_controller'
 
 def main
   controller = VehicleController.new

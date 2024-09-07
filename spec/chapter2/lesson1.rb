@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../../chapter2/lesson1'
+require_relative '../../src/exercises/chapter2/lesson1'
 
 RSpec.describe 'solution' do
   describe 'when all numbers are positive' do

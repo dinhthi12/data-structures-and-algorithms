@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../../chapter1/lesson1'
+require_relative '../../src/exercises/chapter1/lesson1'
 
 RSpec.describe 'solution' do
   describe 'when n is 0' do

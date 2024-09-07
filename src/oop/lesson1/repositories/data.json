@@ -43,5 +43,14 @@
     "max_speed": 230,
     "seat_number": 4,
     "engine_type": "Diesel"
+  },
+  {
+    "id": "0e2053cf-fe8f-43e6-834d-8cecd358909e",
+    "manufacturer": "Hyundai",
+    "vehicle_name": "Grand i10",
+    "year_of_manufacture": 2011,
+    "max_speed": 120,
+    "seat_number": 4,
+    "engine_type": "Petrol"
   }
 ]

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../../chapter2/lesson2'
+require_relative '../../src/exercises/chapter2/lesson2'
 
 RSpec.describe 'solution' do
   describe 'when both numbers have the same sign' do

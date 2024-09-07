@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../../chapter1/lesson16'
+require_relative '../../src/exercises/chapter1/lesson16'
 
 RSpec.describe 'solution' do
   it 'calculates the sum for n = 1 correctly' do

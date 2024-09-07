@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../../chapter2/lesson4'
+require_relative '../../src/exercises/chapter2/lesson4'
 
 RSpec.describe 'solution' do
   describe 'when input is a valid month' do

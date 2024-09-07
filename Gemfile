@@ -18,5 +18,4 @@ gem 'rubocop', require: false
 gem 'tty-prompt', '~> 0.23.1'
 # Extends String class or add a ColorizedString with methods to set text color, background color and text effects.
 gem 'colorize', '~> 0.8.1'
-# Code coverage for Ruby 1.9+ with a powerful configuration library and automatic merging of coverage across test suites
-gem 'simplecov', require: false
+
