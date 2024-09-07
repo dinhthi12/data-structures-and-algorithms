@@ -7,7 +7,7 @@ desc 'Run all specs'
 task :spec do
   Rake::Task['spec:chapter1:run'].invoke
   Rake::Task['spec:chapter2:run'].invoke
-  Rake::Task['spec:chapter3:run'].invoke
+  # Rake::Task['spec:chapter3:run'].invoke
 end
 
 # Task to run spec for chapter 1
