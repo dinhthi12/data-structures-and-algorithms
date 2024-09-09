@@ -5,11 +5,7 @@
 # @return {Float} - The sum of the harmonic series up to n
 
 def solution(n)
-  return 0 if n.zero?
+  return 0 if  n <= 0
 
-  result = 0
-  (1..n).each do |i|
-    result += 1 / i.to_f
-  end
-  result
+  (1..n).sum { |i| 1.0 / i }
 end

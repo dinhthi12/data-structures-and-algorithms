@@ -12,11 +12,11 @@ def solution(n)
   m = 0
 
   # Increment m and add it to sum while the sum is less than n
-  while sum < n
+  while (sum + (m + 1)) < n
     m += 1
     sum += m
   end
 
   # Return the largest integer m where the sum of 1 to m is less than n
-  m - 1
+  m
 end

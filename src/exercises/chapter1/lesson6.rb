@@ -5,7 +5,7 @@
 # @return {Float} - The sum of the series up to 1/n×(n + 1)
 
 def solution(n)
-  result = 0
+  result = 0.0
   (1..n).each do |i|
     result += 1.0 / (i * (i + 1)) # Each element is 1 / (i * (i + 1))
   end

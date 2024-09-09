@@ -5,9 +5,7 @@
 # @return {Integer} - the sum of all integers from 1 to n
 
 def solution(n)
-  sum = 0
-  (1..n).each do |i|
-    sum += i
-  end
-  sum
+  return 0 if n.zero?
+
+  (1..n).sum
 end

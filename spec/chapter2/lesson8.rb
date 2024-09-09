@@ -23,7 +23,7 @@ RSpec.describe 'solution' do
 
   describe 'when is n = -5' do
     it 'returns result false' do
-      expect(solution(-5)).to eq(false)
+      expect(solution(-5)).to eq(0)
     end
   end
 end

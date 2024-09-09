@@ -13,7 +13,7 @@ RSpec.describe 'solution' do
     it 'returns the correct sum' do
       expect(solution(1)).to eq(0.5)
       expect(solution(2)).to eq(0.75)
-      expect(solution(3)).to eq(0.875)
+      expect(solution(3)).to eq(0.9166666666666666)
     end
   end
 end

@@ -5,9 +5,7 @@
 # @return {Integer} - The sum of squares of all integers from 1 to n
 
 def solution(n)
-  result = 0
-  (1..n).each do |i|
-    result += i**2
-  end
-  result
+  return 0 if n.zero?
+
+  (1..n).sum { |i| i**2 }
 end
