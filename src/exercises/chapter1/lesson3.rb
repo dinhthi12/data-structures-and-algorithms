@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-# Tính S(n) = 1 + ½ + 1/3 + … + 1/n
+# S(n) = 1 + ½ + 1/3 + … + 1/n
+# @param {Integer} n - The upper limit of the range
+# @return {Float} - The sum of the harmonic series up to n
 
 def solution(n)
   return 0 if n.zero?
