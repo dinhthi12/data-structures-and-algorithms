@@ -2,6 +2,8 @@
 
 require_relative '../../oop/lesson1/controllers/vehicle_controller'
 
+# Main entry point of the application.
+# Creates a new VehicleController instance and handles user interactions in a loop.
 def main
   controller = VehicleController.new
 
@@ -15,6 +17,9 @@ def main
   end
 end
 
+# Handles user choices and invokes appropriate methods on the controller.
+# @param controller [VehicleController] The controller instance to handle requests.
+# @param choice [Integer] The user's choice from the menu.
 def handle_choice(controller, choice)
   case choice
   when 1
@@ -30,6 +35,11 @@ def handle_choice(controller, choice)
   end
 end
 
+# Safely executes a method on the controller and handles any errors.
+# @param controller [VehicleController] The controller instance to handle requests.
+# @param method_name [Symbol] The method name to be invoked on the controller.
+# @param error_message [String] The error message to be displayed if an exception occurs.
+# @yield If a block is given, it will be executed before calling the method.
 def safely_execute(controller, method_name, error_message)
   yield if block_given?
   controller.send(method_name)
