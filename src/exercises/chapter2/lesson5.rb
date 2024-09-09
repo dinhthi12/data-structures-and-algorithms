@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-# Tính S(n) = 1^3 + 2^3 + … + N^3
+# Calculates the sum of cubes from 1^3 to N^3.
+# @param {Integer} n - The upper limit of the range.
+# @return {Integer} - The sum of cubes of all integers from 1 to n.
 
 def solution(n)
   result = 0

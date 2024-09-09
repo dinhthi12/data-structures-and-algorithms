@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
-# Hãy sử dụnɡ vònɡ lặp for để xuất tất cả các ký tự từ A đến Z
+# Prints all uppercase letters from A to Z.
+# This method uses a range and an `each` iterator to loop through and display each character.
 
 def solution
+  # Iterate through the range from 'A' to 'Z'
   ('A'..'Z').each do |char|
+    # Print each character in the range
     puts char
   end
 end

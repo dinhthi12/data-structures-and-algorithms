@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
-# Viết chươnɡ trình tìm số lớn nhất tronɡ 3 số thực ɑ, b, c
+# Finds the maximum value among three real numbers a, b, and c.
+# @param {Float} a - The first real number.
+# @param {Float} b - The second real number.
+# @param {Float} c - The third real number.
+# @return {Float} - The largest of the three numbers.
 
 def solution(a, b, c)
   max = a
