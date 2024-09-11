@@ -36,63 +36,90 @@ class VehicleService
   # Displays the list of vehicles in a table format.
   # @return [void] This method does not return a value. It prints the table to the console.
   def display_vehicles
-    vehicles = @repository.load_data
+    vehicles = @repository.load_data.map { |vehicle| OTo.new(vehicle) }
 
     if vehicles.empty?
-      puts "No vehicles found."
+      display_error "No vehicles found."
     else
       headings = ['No.', 'Manufacturer', 'Vehicle Name', 'Year', 'Max Speed', 'Base Speed', 'Seats', 'Engine Type']
-
-      rows = vehicles.each_with_index.map do |vehicle, index|
-        o_to = OTo.new(vehicle)
-
-        values = [
-          o_to.manufacturer,
-          o_to.vehicle_name,
-          o_to.year_of_manufacture,
-          o_to.max_speed.to_s + ' km/h',
-          o_to.base_speed.to_s + ' km/h',
-          o_to.seat_number,
-          o_to.engine_type
-        ]
-
-        [index + 1] + values
-      end
-
-      table = Terminal::Table.new(
-        headings: headings,
-        rows: rows
-      )
-
-      puts table
+      display_vehicles_table(vehicles, headings)
     end
   end
 
   # Sorts vehicles by their base speed and displays them.
   # @return [void] This method does not return a value. It prints the sorted list of vehicles to the console.
   def sort_vehicles_by_base_speed
-    sort_order = @prompt.select('Select sort order:', ['Ascending', 'Descending'])
+    sort_order = @prompt.select('Select sort order:', %w[Ascending Descending])
 
     vehicles = @repository.load_data
-    return puts 'No vehicles found.' if vehicles.empty?
+    return display_error 'No vehicles found.' if vehicles.empty?
 
-    sorted_vehicles =  vehicles.map { |vehicle| OTo.new(vehicle)}
-
+    sorted_vehicles = vehicles.map { |vehicle| OTo.new(vehicle) }
     sorted_vehicles.sort_by!(&:base_speed)
     sorted_vehicles.reverse! if sort_order == 'Descending'
 
-    display_sorted_vehicles(sorted_vehicles)
+    display_vehicles_table(sorted_vehicles, ['No.', 'Manufacturer', 'Vehicle Name', 'Year', 'Max Speed', 'Base Speed', 'Seats', 'Engine Type'])
+  end
+
+  # Searches for a vehicle based on a given search criterion.
+  # @return [void] Prints the search results in a table or notifies if no vehicles match the search.
+  def search_vehicle
+    search_options = ['Manufacturer', 'Vehicle name', 'Year', 'Max speed', 'Engine type']
+    search_by = @prompt.select('Search vehicle by:', search_options)
+
+    search_value = @prompt.ask("Enter #{search_by.downcase.tr('_', ' ')}:")&.downcase
+
+    vehicles = @repository.load_data
+    search_list = vehicles.map { |vehicle| OTo.new(vehicle) }
+
+    matching_vehicles = search_list.select do |vehicle|
+      case search_by
+      when 'Manufacturer'
+        vehicle.manufacturer.downcase.include?(search_value)
+      when 'Vehicle name'
+        vehicle.vehicle_name.downcase.include?(search_value)
+      when 'Year'
+        vehicle.year_of_manufacture.to_s == search_value
+      when 'Max speed'
+        vehicle.max_speed.to_s == search_value
+      when 'Engine type'
+        vehicle.engine_type.downcase.include?(search_value)
+      else
+        false
+      end
+    end
+
+    if matching_vehicles.empty?
+      display_error "No vehicles found for #{search_by.downcase.tr('_', ' ')}: #{search_value}"
+    else
+      display_vehicles_table(matching_vehicles, ['No.', 'Manufacturer', 'Vehicle Name', 'Year', 'Max Speed', 'Base Speed', 'Seats', 'Engine Type'])
+      display_success "Search list information cars successfully! 🚗"
+    end
   end
 
   private
 
-  # Displays a table of sorted vehicles.
-  # @param sorted_vehicles [Array<OTo>] An array of OTo instances sorted by base speed.
-  # @return [void] This method does not return a value. It prints the table to the console.
-  def display_sorted_vehicles(sorted_vehicles)
-    headings = ['No.', 'Manufacturer', 'Vehicle Name', 'Year', 'Max Speed', 'Base Speed', 'Seats', 'Engine Type']
+  # Displays an error message to the user.
+  # @param message [String] The error message to display.
+  # @return [void]
+  def display_error(message)
+    puts message.colorize(:red)
+  end
 
-    rows = sorted_vehicles.each_with_index.map do |vehicle, index|
+  # Displays a success message to the user.
+  # @param message [String] The success message to display.
+  # @return [void]
+  def display_success(message)
+    puts message.colorize(:green)
+  end
+
+  # Displays a table of vehicles.
+  # @param vehicles [Array<OTo>] An array of OTo instances.
+  # @param heading [Array<String>] The headings for the table.
+  # @param include_no [Boolean] Whether to include a 'No.' column.
+  # @return [void] This method does not return a value. It prints the table to the console.
+  def display_vehicles_table(vehicles, heading, include_no: true)
+    rows = vehicles.each_with_index.map do |vehicle, index|
       values = [
         vehicle.manufacturer,
         vehicle.vehicle_name,
@@ -103,11 +130,11 @@ class VehicleService
         vehicle.engine_type
       ]
 
-      [index + 1] + values
+      include_no ? [index + 1] + values : values
     end
 
     table = Terminal::Table.new(
-      headings: headings,
+      headings: heading,
       rows: rows
     )
 

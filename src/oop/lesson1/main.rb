@@ -11,8 +11,10 @@ def main
     controller.display_menu
     choice = gets.chomp.to_i
 
-    handle_choice(controller, choice)
-
+    if handle_choice(controller, choice) == :exit
+      puts 'Exiting...'
+      break
+    end
     break unless controller.continue?
   end
 end
@@ -26,10 +28,12 @@ def handle_choice(controller, choice)
     safely_execute(controller, :add_vehicle, 'Failed to add car')
   when 2
     safely_execute(controller, :sort_vehicle_by_base_speed, 'Failed to sort list information car')
+  when 3
+    safely_execute(controller, :search_vehicle, 'Failed to search list information car')
   when 4
     safely_execute(controller, :display_vehicles, 'Failed to display information car')
   when 6
-    controller.display_success('Exiting...')
+    :exit
   else
     puts 'Invalid function. Please select again.'
   end
