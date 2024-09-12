@@ -2,9 +2,9 @@
 
 # frozen_string_literal: true
 
-# # @param {Integer} start
-# # @param {Integer} goal
-# # @return {Integer}
+# @param {Integer} start
+# @param {Integer} goal
+# @return {Integer}
 def min_bit_flips(start, goal)
     # This computes the XOR of the two numbers. Wherever the bits differ, the XOR result will have a 1.
     xor_result = start ^ goal
