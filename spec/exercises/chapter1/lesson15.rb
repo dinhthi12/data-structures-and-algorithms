@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../../src/exercises/chapter1/lesson15'
+require_relative '../../../src/exercises/chapter1/lesson15'
 
 describe 'solution' do
   it 'returns the correct result' do

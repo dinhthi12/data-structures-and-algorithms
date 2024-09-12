@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../../src/exercises/chapter1/lesson11'
+require_relative '../../../src/exercises/chapter1/lesson11'
 
 describe 'solution' do
   context 'when n is 1' do
