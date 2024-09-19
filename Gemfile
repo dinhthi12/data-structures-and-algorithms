@@ -19,3 +19,7 @@ gem 'tty-prompt', '~> 0.23.1'
 # Extends String class or add a ColorizedString with methods to set text color, background color and text effects.
 gem 'colorize', '~> 0.8.1'
 
+group :test do
+  gem 'simplecov'
+  gem 'simplecov-rcov'
+end

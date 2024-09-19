@@ -1,2 +1,7 @@
-.byebug_history
 .idea/
+
+# Ignore debug history
+.byebug_history
+
+# Ignore test result
+.spec-reports

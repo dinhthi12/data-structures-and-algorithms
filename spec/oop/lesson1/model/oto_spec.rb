@@ -1,4 +1,3 @@
-require_relative '../../../../config/spec_helper'
 require 'json'
 require_relative '../../../../src/oop/lesson1/models/o_to'
 require_relative '../../../../src/oop/lesson1/models/transportation_means'
