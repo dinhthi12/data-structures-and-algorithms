@@ -67,7 +67,7 @@ RSpec.describe OTo, type: :model do
   describe '#<=>' do
     it 'compares the base speed with another OTo instance' do
       # Create two OTo instances with different max speeds
-      oto1 = OTo.new(valid_attributes.merge(max_speed: 240))
+      oto1 = OTo.new(valid_attributes.merge(max_speed: 250))
       oto2 = OTo.new(valid_attributes.merge(max_speed: 200))
 
       # Compare base speeds between oto1 and oto2 using the spaceship operator
