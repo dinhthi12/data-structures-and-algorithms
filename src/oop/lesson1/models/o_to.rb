@@ -2,6 +2,9 @@
 
 # OTo class represents a type of vehicle with specific attributes such as manufacturer,
 # vehicle name, year of manufacture, max speed, seat number, and engine type.
+
+require_relative 'transportation_means'
+
 class OTo < TransportationMeans
   attr_accessor :seat_number, :engine_type
 
