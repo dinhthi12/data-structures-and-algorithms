@@ -3,6 +3,7 @@
 # OTo class represents a type of vehicle with specific attributes such as manufacturer,
 # vehicle name, year of manufacture, max speed, seat number, and engine type.
 
+# so it can be used in the current file (e.g., for testing or as a dependency).
 require_relative 'transportation_means'
 
 class OTo < TransportationMeans
