@@ -1,4 +1,0 @@
-project_type: ruby
-test:
-  rpsec:
-    command: bundle exec rspec --format html --out .spec-reports/rspec.html spec/
