@@ -1,9 +1,9 @@
 export default class Comparator<T extends string | number> {
-  private compare: (a: T, b: T) => number;
+  private compare: (a: T, b: T) => number
 
   /**
-   * Contructor
-   * @param {function(a: *, b: *)} [CompareFunction] - It may be custom compare function that, let's
+   * Constructor
+   * @param {function(a: T, b: T)} [CompareFunction] - It may be custom compare function that, let's
    * say may compare custom object together.
    */
   constructor(compareFunction?: (a: T, b: T) => number) {
@@ -21,9 +21,9 @@ export default class Comparator<T extends string | number> {
     b: string | number
   ): number {
     if (a === b) {
-      return 0;
+      return 0
     }
-    return a < b ? -1 : 1;
+    return a < b ? -1 : 1
   }
 
   /**
@@ -33,7 +33,7 @@ export default class Comparator<T extends string | number> {
    * @return {boolean}
    */
   equal(a: T, b: T): boolean {
-    return this.compare(a, b) === 0;
+    return this.compare(a, b) === 0
   }
 
   /**
@@ -43,7 +43,7 @@ export default class Comparator<T extends string | number> {
    * @return {boolean}
    */
   lessThan(a: T, b: T): boolean {
-    return this.compare(a, b) < 0;
+    return this.compare(a, b) < 0
   }
 
   /**
@@ -53,7 +53,7 @@ export default class Comparator<T extends string | number> {
    * @return {boolean}
    */
   greaterThan(a: T, b: T): boolean {
-    return this.compare(a, b) > 0;
+    return this.compare(a, b) > 0
   }
 
   /**
@@ -63,7 +63,7 @@ export default class Comparator<T extends string | number> {
    * @return {boolean}
    */
   lessThanOrEqual(a: T, b: T): boolean {
-    return this.lessThan(a, b) || this.equal(a, b);
+    return this.lessThan(a, b) || this.equal(a, b)
   }
 
   /**
@@ -73,7 +73,7 @@ export default class Comparator<T extends string | number> {
    * @return {boolean}
    */
   greaterThanOrEqual(a: T, b: T): boolean {
-    return this.greaterThan(a, b) || this.equal(a, b);
+    return this.greaterThan(a, b) || this.equal(a, b)
   }
 
   /**
@@ -81,6 +81,6 @@ export default class Comparator<T extends string | number> {
    */
   reverse(): void {
     const compareOriginal = this.compare;
-    this.compare = (a: T, b: T) => compareOriginal(b, a);
+    this.compare = (a: T, b: T) => compareOriginal(b, a)
   }
 }
