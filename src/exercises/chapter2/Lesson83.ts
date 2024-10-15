@@ -1,7 +1,6 @@
 /**
  * Lesson: Check if two real numbers have the same sign
  */
-
 export default class LessonCheckSign {
 
   /**
