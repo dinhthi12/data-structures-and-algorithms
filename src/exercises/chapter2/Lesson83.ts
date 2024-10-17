@@ -5,6 +5,7 @@ export default class LessonCheckSign {
 
   /**
    * This function checks if two real numbers have the same sign.
+   *
    * @param num1 - first real number
    * @param num2 - second real number
    * @returns true if both numbers have the same sign, false otherwise

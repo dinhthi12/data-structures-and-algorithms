@@ -5,6 +5,7 @@ export default class Lesson1 {
 
   /**
    * Calculates the sum from 1 to n.
+   *
    * @param {number} n - The upper limit number to calculate the sum.
    * @return {number} - The sum of numbers from 1 to n.
    */

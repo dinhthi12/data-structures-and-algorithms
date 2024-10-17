@@ -5,6 +5,7 @@ export default class Lesson82 {
 
   /**
    * This function compares three numbers and returns the largest one.
+   *
    * @param num1 - first number
    * @param num2 - second number
    * @param num3 - third number
