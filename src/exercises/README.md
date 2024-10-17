@@ -29,7 +29,7 @@
 - finally, is the algorithm part combined with comments for each line of code.
 
 ```ts
- export default class Lesson 134 {
+ export default class Lesson134 {
 
   solution(param: type): type {
     code...
