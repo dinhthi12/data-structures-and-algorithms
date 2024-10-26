@@ -9,14 +9,14 @@ export default class Lesson86 {
    * @return {number} - The sum of cubes from 1^3 to n^3.
    */
   solution(n: number): number {
-    let result = 0; // Initialize result to store the sum of cubes.
+    let result = 0 // Initialize result to store the sum of cubes.
 
     // Loop through all numbers from 1 to n and accumulate the cube of each number.
     for (let i = 1; i <= n; i++) {
-      result += i * i * i; // Add the cube of i to the result.
+      result += i * i * i // Add the cube of i to the result.
     }
 
     // Return the calculated sum of cubes.
-    return result;
+    return result
   }
 }

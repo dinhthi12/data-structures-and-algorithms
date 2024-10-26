@@ -9,18 +9,18 @@ export default class Lesson87 {
    */
   solution(): number {
     // Initialize sum to accumulate values
-    let sum = 0;
+    let sum = 0
      // Initialize n to track the current number
-    let n = 0;
+    let n = 0
 
     // Keep adding numbers until the sum exceeds 10000
     while (sum <= 10000) {
-      n++;
+      n++
       // Add the current value of n to sum
-      sum += n;
+      sum += n
     }
 
     // Return the smallest n where sum exceeds 10000
-    return n;
+    return n
   }
 }
