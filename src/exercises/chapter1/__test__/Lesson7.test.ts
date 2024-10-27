@@ -1,7 +1,11 @@
 import Lesson7 from '../Lesson7'
 
 describe('Lesson7: Sum of Series 1/2 + 2/3 + 3/4 + … + n/(n + 1)', () => {
-  const lesson = new Lesson7()
+  let lesson: Lesson7
+
+  beforeEach(() => {
+    lesson = new Lesson7()
+  })
 
   it('should return 0 for n = 0', () => {
     expect(lesson.solution(0)).toBe(0)

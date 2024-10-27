@@ -1,7 +1,11 @@
 import Lesson90 from '../Lesson90'
 
 describe('Lesson90: Find the largest positive integer m such that 1 + 2 + … + m < N', () => {
-  const lesson = new Lesson90()
+  let lesson: Lesson90
+
+  beforeEach(() => {
+    lesson = new Lesson90()
+  })
 
   it('should return 2 for n = 5', () => {
     expect(lesson.solution(5)).toBe(2)

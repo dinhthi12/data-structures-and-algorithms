@@ -1,8 +1,11 @@
 import Lesson84 from '../Lesson84'
 
 describe('Lesson84 Tests', () => {
-  const lesson = new Lesson84()
+  let lesson: Lesson84
 
+  beforeEach(() => {
+    lesson = new Lesson84()
+  })
   /**
    * Test case 1: Standard equation with solution
    * Equation: 2x + 4 = 0

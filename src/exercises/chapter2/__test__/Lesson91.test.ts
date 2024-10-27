@@ -1,7 +1,12 @@
 import Lesson91 from '../Lesson91'
 
 describe('Lesson91: Print all odd positive integers less than 100', () => {
-  const lesson = new Lesson91()
+  let lesson: Lesson91
+
+  beforeEach(() => {
+    lesson = new Lesson91()
+  })
+
   let consoleSpy: jest.SpyInstance
 
   beforeEach(() => {

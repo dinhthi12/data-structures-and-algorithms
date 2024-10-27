@@ -1,7 +1,12 @@
 import Lesson88 from '../Lesson88'
 
 describe('Lesson88: Output all characters from A to Z', () => {
-  const lesson = new Lesson88()
+  let lesson: Lesson88
+
+  beforeEach(() => {
+    lesson = new Lesson88()
+  })
+
   const consoleSpy = jest.spyOn(console, 'log').mockImplementation()
 
   afterEach(() => {

@@ -1,7 +1,11 @@
 import Lesson4 from '../Lesson4'
 
 describe('Lesson4 Tests', () => {
-  const lesson = new Lesson4()
+  let lesson: Lesson4
+
+  beforeEach(() => {
+    lesson = new Lesson4()
+  })
 
   /**
    * Test case 1: Test the series with n = 1

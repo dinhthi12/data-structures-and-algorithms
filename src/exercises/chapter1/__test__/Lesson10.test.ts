@@ -1,7 +1,11 @@
 import Lesson10 from '../Lesson10'
 
 describe('Lesson10: Calculate T(x, n) = x^n (x raised to the power of n)', () => {
-  const lesson = new Lesson10()
+  let lesson: Lesson10
+
+  beforeEach(() => {
+    lesson = new Lesson10()
+  })
 
   it('should return 1 for any x when n = 0', () => {
     expect(lesson.solution(2, 0)).toBe(1)  // 2^0 = 1

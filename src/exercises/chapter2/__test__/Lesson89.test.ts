@@ -1,7 +1,11 @@
 import Lesson89 from '../Lesson89'
 
 describe('Lesson89: Sum of positive odd integers less than N', () => {
-  const lesson = new Lesson89()
+  let lesson: Lesson89
+
+  beforeEach(() => {
+    lesson = new Lesson89()
+  })
 
   it('should return 0 for n = 1 (no odd integers less than 1)', () => {
     expect(lesson.solution(1)).toBe(0)

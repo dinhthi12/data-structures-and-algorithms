@@ -1,7 +1,11 @@
 import Lesson9 from '../Lesson9'
 
 describe('Lesson9: Calculate T(n) = 1 x 2 x 3 ... x n (Factorial of n)', () => {
-  const lesson = new Lesson9()
+  let lesson: Lesson9
+
+  beforeEach(() => {
+    lesson = new Lesson9()
+  })
 
   it('should return 1 for n = 0 (Factorial of 0)', () => {
     expect(lesson.solution(0)).toBe(1)  // 0! is defined as 1

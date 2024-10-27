@@ -10,14 +10,14 @@ export default class Lesson9 {
    */
   solution(n: number): number {
     // Initialize result to 1 since it's a product
-    let result = 1;
+    let result = 1
 
     // Loop through all numbers from 1 to n and multiply them
     for (let i = 1; i <= n; i++) {
-      result *= i;
+      result *= i
     }
 
     // Return the calculated factorial
-    return result;
+    return result
   }
 }

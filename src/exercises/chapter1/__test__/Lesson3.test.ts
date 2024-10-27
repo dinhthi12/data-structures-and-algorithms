@@ -2,7 +2,11 @@ import Lesson3 from '../Lesson3'
 
 
 describe('Lesson3 Tests', () => {
-  const lesson = new Lesson3()
+  let lesson: Lesson3
+
+  beforeEach(() => {
+    lesson = new Lesson3()
+  })
 
   /**
    * Test case 1: Test the harmonic series with n = 1
