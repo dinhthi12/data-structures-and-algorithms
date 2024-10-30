@@ -15,6 +15,6 @@ export default class Lesson20 {
         divisors.push(i)
       }
     }
-    return divisors
+    return divisors;
   }
 }

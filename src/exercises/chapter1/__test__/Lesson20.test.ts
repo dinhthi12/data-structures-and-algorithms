@@ -33,5 +33,5 @@ describe('Lesson20 Solution', () => {
 
   test('should return [1, 2, 7, 14] for n = 14', () => {
     expect(lesson.solution(14)).toEqual([1, 2, 7, 14])
-  })
+  });
 })
