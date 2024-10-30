@@ -11,6 +11,6 @@ export default class LessonExample {
    * @return {number} - The GCD of the two integers.
    */
   gcd(a: number, b: number): number {
-    return (b ? this.gcd(b, a % b) : a); // Recursively find the GCD
+    return (b ? this.gcd(b, a % b) : a) // Recursively find the GCD
   }
 }

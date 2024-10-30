@@ -25,5 +25,5 @@ describe('Lesson15 Solution', () => {
 
   test('should return approximately 1.6666666666666667 for n = 5', () => {
     expect(lesson.solution(5)).toBeCloseTo(1.6666666666666667, 5) // 1 + 1/3 + 1/6 + 1/10 + 1/15
-  })
+  });
 })

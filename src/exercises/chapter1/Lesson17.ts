@@ -32,5 +32,5 @@ export default class Lesson17 {
     }
 
     return result
-  }
+  };
 }

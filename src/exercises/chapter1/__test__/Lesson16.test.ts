@@ -25,5 +25,5 @@ describe('Lesson16 Solution', () => {
 
   test('should return approximately 1.5 for x = 1, n = 3', () => {
     expect(lesson.solution(1, 3)).toBeCloseTo(1.5, 5) // S(3) = x + x^2 / (1+2) + x^3 / (1+2+3) = 1 + 1/3 + 1/6
-  })
+  });
 })

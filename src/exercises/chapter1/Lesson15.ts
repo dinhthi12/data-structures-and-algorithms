@@ -20,5 +20,5 @@ export default class Lesson15 {
         result += 1/sum
       }
       return result
-    }
+    };
 }

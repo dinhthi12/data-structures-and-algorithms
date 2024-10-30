@@ -25,5 +25,5 @@ describe('Lesson17 Solution', () => {
 
   test('should return approximately 6 for x = 2, n = 4', () => {
     expect(lesson.solution(2, 4)).toBeCloseTo(6, 5) // S(4) = 2 + 4/2 + 8/6 + 16/24
-  })
+  });
 })

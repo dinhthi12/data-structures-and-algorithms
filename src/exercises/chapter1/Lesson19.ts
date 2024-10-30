@@ -25,12 +25,12 @@ export default class Lesson19 {
    * @return {number} - The calculated sum of the series
    */
   solution(x: number, n: number): number {
-    let result = 1; // Start with the first term, which is 1
+    let result = 1 // Start with the first term, which is 1
 
     for (let i = 0; i <= n; i++) {
-      result += Math.pow(x, 2 * i + 1) / this.factorial(2 * i + 1);
+      result += Math.pow(x, 2 * i + 1) / this.factorial(2 * i + 1)
     }
 
-    return result;
+    return result
   }
 }

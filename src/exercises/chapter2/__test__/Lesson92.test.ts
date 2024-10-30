@@ -33,5 +33,5 @@ describe('Lesson92 GCD', () => {
 
   test('should return 25 for GCD of 100 and 75', () => {
     expect(lesson.gcd(100, 75)).toBe(25) // GCD(100, 75) = 25
-  })
+  });
 })

@@ -45,5 +45,5 @@ describe('Sum from 1 to n', () => {
    */
   it('should return 5050 for n = 100', () => {
     expect(lesson1.solution(100)).toBe(5050)
-  })
+  });
 })
