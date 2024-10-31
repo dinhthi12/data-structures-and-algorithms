@@ -1,10 +1,10 @@
 /**
  *
  */
-export default class LessonExample {
+export default class Lesson133 {
 
   /**
-   * Description
+   *
    * @param
    * @return
    */

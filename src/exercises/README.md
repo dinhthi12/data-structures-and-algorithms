@@ -12,7 +12,7 @@
 
 ```ts
 /**
- * Lesson 134: Write a function to find the largest value in a 1-dimensional array of real numbers.
+ * Lesson 133: Write a function to find the largest value in a 1-dimensional array of real numbers.
  */
 ```
 
@@ -29,7 +29,7 @@
 - finally, is the algorithm part combined with comments for each line of code.
 
 ```ts
- export default class Lesson134 {
+ export default class Lesson133 {
 
   solution(param: type): type {
     code...
