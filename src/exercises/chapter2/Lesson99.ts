@@ -31,7 +31,7 @@ export default class Lesson99 {
       c = temp
     }
 
-    console.log(a, b, c);
+    console.log(a, b, c)
 
   }
 }

@@ -8,7 +8,7 @@ export default class Lesson23 {
    * @return - The number of divisors of n.
    */
   solution(n: number): number {
-    let count = 0;
+    let count = 0
 
     // Loop through all numbers from 1 to the square root of n
     for (let i = 1; i <= Math.sqrt(n); i++) {
@@ -16,12 +16,12 @@ export default class Lesson23 {
         count += 1; // Count divisor i
 
         if (i !== n / i) {
-          count += 1; // Count paired divisor n / i if it's not the same as i
+          count += 1 // Count paired divisor n / i if it's not the same as i
         }
       }
     }
 
-    return count;
+    return count
   }
 }
 

@@ -8,19 +8,19 @@ export default class Lesson22 {
    * @return - The product of all divisors of n.
    */
   solution(n: number): number {
-    let product = 1;
+    let product = 1
 
     // Loop through all numbers from 1 to the square root of n
     for (let i = 1; i <= Math.sqrt(n); i++) {
       if (n % i === 0) {
-        product *= i;  // Multiply by the divisor i
+        product *= i  // Multiply by the divisor i
 
         if (i !== n / i) {
-          product *= n / i;  // Multiply by the paired divisor n / i
+          product *= n / i  // Multiply by the paired divisor n / i
         }
       }
     }
 
-    return product;
+    return product
   }
 }

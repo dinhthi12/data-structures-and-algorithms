@@ -9,12 +9,12 @@ export default class Lesson20 {
    * @returns An array of divisors of n
    */
   solution(n: number): number[] {
-    const divisors: number[] = [];
+    const divisors: number[] = []
     for (let i = 1; i <= n; i++) {
       if (n % i === 0) { // Check if i is a divisor of n
         divisors.push(i)
       }
     }
-    return divisors;
+    return divisors
   }
 }
