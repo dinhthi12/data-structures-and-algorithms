@@ -2,13 +2,13 @@ package main
 
 func main() {
 	/**
-	Cannot be redeclared/reassigned
-	Can only hod scalar values
-	Can hold large high precision numbers
-	Can be created from expressions of other constants
-	Can be untyped (kind)
-	Constants exits only during compilation time
-	*/
+	* Cannot be redeclared/reassigned
+	* Can only hod scalar values
+	* Can hold large high precision numbers
+	* Can be created from expressions of other constants
+	* Can be untyped (kind)
+	* Constants exits only during compilation time
+	 */
 
 	//one line untyped
 	const identifierInt = 10
