@@ -20,7 +20,7 @@ func TestSumN(t *testing.T) {
 	for _, test := range tests {
 		got := chapter1.SumN(test.input)
 		if got != test.expected {
-			t.Errorf("SumN(%d) = %d; want %d", test.input, got, test.expected)
+			t.Errorf("Sum N(%d) = %d; want %d", test.input, got, test.expected)
 		}
 	}
 }

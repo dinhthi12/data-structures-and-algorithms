@@ -22,7 +22,7 @@ func TestSumHarmonic(t *testing.T) {
 	for _, tt := range tests {
 		result := chapter1.SumHarmonic(tt.n)
 		if math.Abs(result-tt.expected) > 1e-5 {
-			t.Errorf("SumHarmonic(%d) = %f; want %f", tt.n, result, tt.expected)
+			t.Errorf("Sum Harmonic(%d) = %f; want %f", tt.n, result, tt.expected)
 		}
 	}
 }

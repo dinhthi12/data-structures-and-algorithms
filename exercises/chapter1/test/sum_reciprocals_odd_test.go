@@ -23,7 +23,7 @@ func TestSumReciprocalsOdd(t *testing.T) {
 	for _, tc := range tests {
 		result := chapter1.SumReciprocalsOdd(tc.n)
 		if !utils.AlmostEqual(result, tc.expected, tolerance) {
-			t.Errorf("SumReciprocalsOdd(%d) = %.6f; want %.6f", tc.n, result, tc.expected)
+			t.Errorf("Sum Reciprocals Odd(%d) = %.6f; want %.6f", tc.n, result, tc.expected)
 		}
 	}
 }

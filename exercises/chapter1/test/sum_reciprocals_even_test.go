@@ -25,7 +25,7 @@ func TestSumReciprocalsEven(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			result := chapter1.SumReciprocalsEven(tt.n)
 			if !utils.AlmostEqual(result, tt.expected, epsilon) {
-				t.Errorf("Expected %v, got %v", tt.expected, result)
+				t.Errorf("Sum Reciprocals even %v, got %v", tt.expected, result)
 			}
 		})
 	}

@@ -20,7 +20,7 @@ func TestSumSquares(t *testing.T) {
 	for _, test := range tests {
 		got := chapter1.SumSquares(test.input)
 		if got != test.expected {
-			t.Errorf("SumSquares(%d) = %d; want %d", test.input, got, test.expected)
+			t.Errorf("Sum Squares(%d) = %d; want %d", test.input, got, test.expected)
 		}
 	}
 }
